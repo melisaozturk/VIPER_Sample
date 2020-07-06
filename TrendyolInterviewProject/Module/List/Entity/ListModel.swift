@@ -19,7 +19,7 @@ import Foundation
 //}
 
 // MARK: - Opopularbject
-typealias listResponse = [Widget]
+typealias listResponse = Widget
 
 struct Widget: Decodable {
 
@@ -88,7 +88,7 @@ struct WidgetNavigation : Decodable {
                 case landingTitle = "landingTitle"
                 case navigationType = "navigationType"
         }
-    
+
         init(from decoder: Decoder) throws {
                 let values = try decoder.container(keyedBy: CodingKeys.self)
                 deeplink = try values.decodeIfPresent(String.self, forKey: .deeplink)
@@ -172,7 +172,7 @@ struct Product : Decodable {
                 case stockStatus = "stockStatus"
                 case variants = "variants"
         }
-    
+
         init(from decoder: Decoder) throws {
                 let values = try decoder.container(keyedBy: CodingKeys.self)
                 averageRating = try values.decodeIfPresent(Float.self, forKey: .averageRating)
@@ -230,7 +230,7 @@ struct Variant : Decodable {
                 case value = "value"
                 case variantId = "variantId"
         }
-    
+
         init(from decoder: Decoder) throws {
                 let values = try decoder.container(keyedBy: CodingKeys.self)
                 campaignId = try values.decodeIfPresent(Int.self, forKey: .campaignId)
@@ -252,7 +252,7 @@ struct Price : Decodable {
                 case marketPrice = "marketPrice"
                 case salePrice = "salePrice"
         }
-    
+
         init(from decoder: Decoder) throws {
                 let values = try decoder.container(keyedBy: CodingKeys.self)
                 marketPrice = try values.decodeIfPresent(Float.self, forKey: .marketPrice)
@@ -270,7 +270,7 @@ struct PromotionList: Decodable {
                 case name = "name"
                 case type = "type"
         }
-    
+
         init(from decoder: Decoder) throws {
                 let values = try decoder.container(keyedBy: CodingKeys.self)
                 name = try values.decodeIfPresent(String.self, forKey: .name)
@@ -290,7 +290,7 @@ struct ProductMarketing: Decodable {
                 case enhanced = "enhanced"
                 case facebook = "facebook"
         }
-    
+
         init(from decoder: Decoder) throws {
                 delphoi = try Delphoi1(from: decoder)
                 enhanced = try Enhanced(from: decoder)
@@ -320,7 +320,7 @@ struct Facebook : Decodable {
                 case productMerchantid = "product_merchantid"
                 case quantity = "quantity"
         }
-    
+
         init(from decoder: Decoder) throws {
                 let values = try decoder.container(keyedBy: CodingKeys.self)
                 id = try values.decodeIfPresent(String.self, forKey: .id)
@@ -362,7 +362,7 @@ struct Enhanced: Decodable {
                 case dimension155 = "dimension155"
                 case dimension156 = "dimension156"
         }
-    
+
         init(from decoder: Decoder) throws {
                 let values = try decoder.container(keyedBy: CodingKeys.self)
                 dimension140 = try values.decodeIfPresent(String.self, forKey: .dimension140)
@@ -387,7 +387,7 @@ struct Delphoi1: Decodable {
         enum CodingKeys: String, CodingKey {
                 case tv067 = "tv067"
         }
-    
+
         init(from decoder: Decoder) throws {
                 let values = try decoder.container(keyedBy: CodingKeys.self)
                 tv067 = try values.decodeIfPresent(String.self, forKey: .tv067)
@@ -402,7 +402,7 @@ struct Marketing2: Decodable {
         enum CodingKeys: String, CodingKey {
                 case delphoi = "delphoi"
         }
-    
+
         init(from decoder: Decoder) throws {
                 delphoi = try Delphoi2(from: decoder)
         }
@@ -422,7 +422,7 @@ struct Delphoi2: Decodable {
                 case tv073 = "tv073"
                 case tv097 = "tv097"
         }
-    
+
         init(from decoder: Decoder) throws {
                 let values = try decoder.container(keyedBy: CodingKeys.self)
                 tv070 = try values.decodeIfPresent(String.self, forKey: .tv070)
@@ -450,7 +450,7 @@ struct DisplayOption: Decodable {
                 case showProductFavoredButton = "showProductFavoredButton"
                 case showProductPrice = "showProductPrice"
         }
-    
+
         init(from decoder: Decoder) throws {
                 let values = try decoder.container(keyedBy: CodingKeys.self)
                 paddingRightLeft = try values.decodeIfPresent(Int.self, forKey: .paddingRightLeft)
@@ -484,7 +484,7 @@ struct BannerContent: Decodable {
                 case navigation = "navigation"
                 case width = "width"
         }
-    
+
         init(from decoder: Decoder) throws {
                 let values = try decoder.container(keyedBy: CodingKeys.self)
                 bannerEventKey = try values.decodeIfPresent(String.self, forKey: .bannerEventKey)
@@ -514,7 +514,7 @@ struct Navigation : Decodable {
                 case navigationType = "navigationType"
                 case title = "title"
         }
-    
+
         init(from decoder: Decoder) throws {
                 let values = try decoder.container(keyedBy: CodingKeys.self)
                 deeplink = try values.decodeIfPresent(String.self, forKey: .deeplink)
@@ -533,7 +533,7 @@ struct Marketing3 : Decodable {
         enum CodingKeys: String, CodingKey {
                 case delphoi = "delphoi"
         }
-    
+
         init(from decoder: Decoder) throws {
                 delphoi = try Delphoi3(from: decoder)
         }
@@ -559,7 +559,7 @@ struct Delphoi3 : Decodable {
                 case tv073 = "tv073"
                 case tv097 = "tv097"
         }
-    
+
         init(from decoder: Decoder) throws {
                 let values = try decoder.container(keyedBy: CodingKeys.self)
                 tv067 = try values.decodeIfPresent(String.self, forKey: .tv067)

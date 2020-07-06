@@ -71,102 +71,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "55F55854-D6FF-4BC4-92BB-8A759C1BFD24"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TrendyolInterviewProject/Api/ApiClient.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "decodingTask(with:decodingType:completionHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "55F55854-D6FF-4BC4-92BB-8A759C1BFD24 - b9a8ba424302859a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(extension in TrendyolInterviewProject):TrendyolInterviewProject.ApiClient.decodingTask&lt;A where A1: Swift.Decodable&gt;(with: Foundation.URLRequest, decodingType: A1.Type, completionHandler: (Swift.Optional&lt;Swift.Decodable&gt;, Swift.Optional&lt;TrendyolInterviewProject.APIError&gt;) -&gt; ()) -&gt; __C.NSURLSessionDataTask"
-                  moduleName = "TrendyolInterviewProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/melisaozturk/Desktop/TrendyolInterviewProject/TrendyolInterviewProject/Api/ApiClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "43"
-                  endingLineNumber = "43"
-                  offsetFromSymbolStart = "256">
-               </Location>
-               <Location
-                  uuid = "55F55854-D6FF-4BC4-92BB-8A759C1BFD24 - c001d04b467bfa2a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in (extension in TrendyolInterviewProject):TrendyolInterviewProject.ApiClient.decodingTask&lt;A where A1: Swift.Decodable&gt;(with: Foundation.URLRequest, decodingType: A1.Type, completionHandler: (Swift.Optional&lt;Swift.Decodable&gt;, Swift.Optional&lt;TrendyolInterviewProject.APIError&gt;) -&gt; ()) -&gt; __C.NSURLSessionDataTask"
-                  moduleName = "TrendyolInterviewProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/melisaozturk/Desktop/TrendyolInterviewProject/TrendyolInterviewProject/Api/ApiClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "232">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4485723A-019E-4FA0-82C5-CB6E9D6BF448"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TrendyolInterviewProject/Api/ApiClient.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "fetch(with:decode:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4485723A-019E-4FA0-82C5-CB6E9D6BF448 - e84cc98c9e289f49"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(extension in TrendyolInterviewProject):TrendyolInterviewProject.ApiClient.fetch&lt;A where A1: Swift.Decodable&gt;(with: Foundation.URLRequest, decode: (Swift.Decodable) -&gt; Swift.Optional&lt;A1&gt;, completion: (TrendyolInterviewProject.Result&lt;A1, TrendyolInterviewProject.APIError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "TrendyolInterviewProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/melisaozturk/Desktop/TrendyolInterviewProject/TrendyolInterviewProject/Api/ApiClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "85">
-               </Location>
-               <Location
-                  uuid = "4485723A-019E-4FA0-82C5-CB6E9D6BF448 - 6797e4d0f9e7b112"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Decodable&gt;, Swift.Optional&lt;TrendyolInterviewProject.APIError&gt;) -&gt; () in (extension in TrendyolInterviewProject):TrendyolInterviewProject.ApiClient.fetch&lt;A where A1: Swift.Decodable&gt;(with: Foundation.URLRequest, decode: (Swift.Decodable) -&gt; Swift.Optional&lt;A1&gt;, completion: (TrendyolInterviewProject.Result&lt;A1, TrendyolInterviewProject.APIError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "TrendyolInterviewProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/melisaozturk/Desktop/TrendyolInterviewProject/TrendyolInterviewProject/Api/ApiClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "341">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "64CF2F7E-ABDF-4162-8E8A-257F6A667FC7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -180,11 +84,26 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "64CF2F7E-ABDF-4162-8E8A-257F6A667FC7 - 183afc51b6789203"
+                  uuid = "64CF2F7E-ABDF-4162-8E8A-257F6A667FC7 - 319c4e6ebd9d6b11"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "TrendyolInterviewProject.ListInteractor.(getFeed in _7CEC046C42C2F6BA50661853DEA55598)(from: TrendyolInterviewProject.Endpoints, completion: (TrendyolInterviewProject.Result&lt;Swift.Optional&lt;Swift.Array&lt;TrendyolInterviewProject.Widget&gt;&gt;, TrendyolInterviewProject.APIError&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "TrendyolInterviewProject.ListInteractor.(getFeed in _7CEC046C42C2F6BA50661853DEA55598)(from: TrendyolInterviewProject.Endpoints, completion: (TrendyolInterviewProject.Result&lt;Swift.Optional&lt;TrendyolInterviewProject.Widget&gt;, TrendyolInterviewProject.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "TrendyolInterviewProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/melisaozturk/Desktop/TrendyolInterviewProject/TrendyolInterviewProject/Module/List/Interactor/ListInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "346">
+               </Location>
+               <Location
+                  uuid = "64CF2F7E-ABDF-4162-8E8A-257F6A667FC7 - dbd1c2d1ec16965b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Decodable) -&gt; Swift.Optional&lt;TrendyolInterviewProject.Widget&gt; in TrendyolInterviewProject.ListInteractor.(getFeed in _7CEC046C42C2F6BA50661853DEA55598)(from: TrendyolInterviewProject.Endpoints, completion: (TrendyolInterviewProject.Result&lt;Swift.Optional&lt;TrendyolInterviewProject.Widget&gt;, TrendyolInterviewProject.APIError&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "TrendyolInterviewProject"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/melisaozturk/Desktop/TrendyolInterviewProject/TrendyolInterviewProject/Module/List/Interactor/ListInteractor.swift"
@@ -192,22 +111,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
                   endingLineNumber = "45"
-                  offsetFromSymbolStart = "346">
-               </Location>
-               <Location
-                  uuid = "64CF2F7E-ABDF-4162-8E8A-257F6A667FC7 - 9a7dcd107c24a451"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Decodable) -&gt; Swift.Optional&lt;Swift.Array&lt;TrendyolInterviewProject.Widget&gt;&gt; in TrendyolInterviewProject.ListInteractor.(getFeed in _7CEC046C42C2F6BA50661853DEA55598)(from: TrendyolInterviewProject.Endpoints, completion: (TrendyolInterviewProject.Result&lt;Swift.Optional&lt;Swift.Array&lt;TrendyolInterviewProject.Widget&gt;&gt;, TrendyolInterviewProject.APIError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "TrendyolInterviewProject"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/melisaozturk/Desktop/TrendyolInterviewProject/TrendyolInterviewProject/Module/List/Interactor/ListInteractor.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "73">
+                  offsetFromSymbolStart = "98">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -242,6 +146,70 @@
             endingLineNumber = "60"
             landmarkName = "init(from:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "827482AB-973A-4C93-AD0E-89AFD53F92CD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrendyolInterviewProject/Api/ApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "fetch(with:decode:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F429A2F-BB1F-454A-A334-7102170E3ED1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TrendyolInterviewProject/Api/ApiClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "decodingTask(with:decodingType:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0F429A2F-BB1F-454A-A334-7102170E3ED1 - b9a8ba424302859a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in TrendyolInterviewProject):TrendyolInterviewProject.ApiClient.decodingTask&lt;A where A1: Swift.Decodable&gt;(with: Foundation.URLRequest, decodingType: A1.Type, completionHandler: (Swift.Optional&lt;Swift.Decodable&gt;, Swift.Optional&lt;TrendyolInterviewProject.APIError&gt;) -&gt; ()) -&gt; __C.NSURLSessionDataTask"
+                  moduleName = "TrendyolInterviewProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/melisaozturk/Desktop/TrendyolInterviewProject/TrendyolInterviewProject/Api/ApiClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "0F429A2F-BB1F-454A-A334-7102170E3ED1 - c001d04b467bfa2a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in (extension in TrendyolInterviewProject):TrendyolInterviewProject.ApiClient.decodingTask&lt;A where A1: Swift.Decodable&gt;(with: Foundation.URLRequest, decodingType: A1.Type, completionHandler: (Swift.Optional&lt;Swift.Decodable&gt;, Swift.Optional&lt;TrendyolInterviewProject.APIError&gt;) -&gt; ()) -&gt; __C.NSURLSessionDataTask"
+                  moduleName = "TrendyolInterviewProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/melisaozturk/Desktop/TrendyolInterviewProject/TrendyolInterviewProject/Api/ApiClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "232">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
