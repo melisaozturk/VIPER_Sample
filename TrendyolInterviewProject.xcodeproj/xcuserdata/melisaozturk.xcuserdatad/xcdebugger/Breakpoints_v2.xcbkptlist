@@ -142,10 +142,42 @@
             filePath = "TrendyolInterviewProject/Module/List/Entity/ListModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "init(from:)"
-            landmarkType = "7">
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "CodingKeys"
+            landmarkType = "13">
+            <Locations>
+               <Location
+                  uuid = "EB67BB65-AAEE-465E-BBAB-11E97B91EFFF - 541a29c71c31362"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrendyolInterviewProject.Widget.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;TrendyolInterviewProject.Widget.CodingKeys&gt;"
+                  moduleName = "TrendyolInterviewProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/melisaozturk/Desktop/TrendyolInterviewProject/TrendyolInterviewProject/Module/List/Entity/ListModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "380">
+               </Location>
+               <Location
+                  uuid = "EB67BB65-AAEE-465E-BBAB-11E97B91EFFF - fbe1b93cd301c565"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TrendyolInterviewProject.Widget.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "TrendyolInterviewProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/melisaozturk/Desktop/TrendyolInterviewProject/TrendyolInterviewProject/Module/List/Entity/ListModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "293">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

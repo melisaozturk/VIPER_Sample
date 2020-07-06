@@ -8,17 +8,6 @@
 
 import Foundation
 
-//typealias listResponse = [ListResponseElement]
-//
-//struct ListResponseElement: Decodable {
-//    let id: Int?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case id = "id"
-//    }
-//}
-
-// MARK: - Opopularbject
 typealias listResponse = Widget
 
 struct Widget: Decodable {
