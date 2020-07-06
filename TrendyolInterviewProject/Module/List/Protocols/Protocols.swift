@@ -20,7 +20,7 @@ protocol ViewToPresenterProtocol: class{
 }
 
 protocol PresenterToViewProtocol: class{
-    func showNotice(listArray:Array<listResponse>)
+    func showList(listArray:Array<listResponse>)
     func showError()
 }
 
@@ -36,6 +36,6 @@ protocol PresenterToInteractorProtocol: class {
 }
 
 protocol InteractorToPresenterProtocol: class {
-    func noticeFetchedSuccess(noticeModelArray:Array<listResponse>)
-    func noticeFetchFailed()
+    func listFetchedSuccess(listModelArray:Array<listResponse>)
+    func listFetchFailed()
 }

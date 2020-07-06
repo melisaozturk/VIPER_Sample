@@ -64,7 +64,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ListViewController:PresenterToViewProtocol{
     
-    func showNotice(listArray: Array<listResponse>) {
+    func showList(listArray: Array<listResponse>) {
 
         self.listArray = listArray
 //        self.tableView.reloadData()
@@ -75,7 +75,7 @@ extension ListViewController:PresenterToViewProtocol{
     func showError() {
 
 //        hideProgressIndicator(view: self.view)
-        let alert = UIAlertController(title: "Alert", message: "Problem Fetching Lisat", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Alert", message: "Problem Fetching List", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         

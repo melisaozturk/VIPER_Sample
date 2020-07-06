@@ -29,11 +29,11 @@ class ListPresenter: ViewToPresenterProtocol {
 }
 
 extension ListPresenter: InteractorToPresenterProtocol {
-    func noticeFetchedSuccess(noticeModelArray: [listResponse]) {
-        view?.showNotice(listArray: noticeModelArray)
+    func listFetchedSuccess(listModelArray: [listResponse]) {
+        view?.showList(listArray: listModelArray)
     }
     
-    func noticeFetchFailed() {
+    func listFetchFailed() {
         view?.showError()
     }
     

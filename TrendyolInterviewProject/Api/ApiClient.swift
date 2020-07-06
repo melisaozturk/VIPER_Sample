@@ -94,7 +94,9 @@ extension ApiClient {
         do {
             var jsonResult: NSDictionary
             try jsonResult = JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
+            #if DEBUG
             print(jsonResult)
+            #endif
         }
         catch {
         }

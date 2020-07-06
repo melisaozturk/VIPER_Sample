@@ -25,22 +25,29 @@ class ListInteractor: ApiClient, PresenterToInteractorProtocol {
     func getData() {
         getFeed(from: .widget, completion: { response in
             switch response {
-            case .success(let photoResponse):
-                guard let results = photoResponse.self else {return}
+            case .success(let successResponse):
+                guard let results = successResponse.self else {return}
+                #if DEBUG
                 print(results)
-                self.presenter?.noticeFetchedSuccess(noticeModelArray: [results])
+                #endif
+                self.presenter?.listFetchedSuccess(listModelArray: [results])
             case .failure( _):
-                self.presenter?.noticeFetchFailed()
+                self.presenter?.listFetchFailed()
+                #if DEBUG
                 print("Error")
+                #endif
             }
         })
     }
     
-    private func getFeed(from photoType: Endpoints, completion: @escaping (Result<listResponse?, APIError>) -> Void) {
+    private func getFeed(from endpointType: Endpoints, completion: @escaping (Result<listResponse?, APIError>) -> Void) {
         
-        let endpoint = photoType
+        let endpoint = endpointType
         let request = endpoint.request
+        #if DEBUG
         print(request)
+        #endif
+        
         fetch(with: request, decode: { json -> listResponse? in
             guard let feedResult = json as? listResponse else { return  nil }
             return feedResult

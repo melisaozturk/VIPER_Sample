@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias listResponse = Widget
+typealias listResponse = [Widget]
 
 struct Widget: Decodable {
 
