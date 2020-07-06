@@ -26,9 +26,9 @@ class ListInteractor: ApiClient, PresenterToInteractorProtocol {
         getFeed(from: .widget, completion: { response in
             switch response {
             case .success(let photoResponse):
-                guard let photoResults = photoResponse.self else {return}
-                print(photoResults)
-                self.presenter?.noticeFetchedSuccess(noticeModelArray: [photoResults])
+                guard let results = photoResponse.self else {return}
+                print(results)
+                self.presenter?.noticeFetchedSuccess(noticeModelArray: [results])
             case .failure( _):
                 self.presenter?.noticeFetchFailed()
                 print("Error")
@@ -36,7 +36,6 @@ class ListInteractor: ApiClient, PresenterToInteractorProtocol {
         })
     }
     
-    //in the signature of the function in the success case we define the Class type thats is the generic one in the API
     private func getFeed(from photoType: Endpoints, completion: @escaping (Result<listResponse?, APIError>) -> Void) {
         
         let endpoint = photoType
@@ -49,27 +48,3 @@ class ListInteractor: ApiClient, PresenterToInteractorProtocol {
     }
 }
 
-
-//
-//class ListInteractor: ListEndpoint, PresenterToInteractorProtocol {
-//
-//    var presenter: InteractorToPresenterProtocol?
-//
-//    func getData() {
-//        getFeed(completion: { response in
-//            switch response {
-//            case .success(let photoResponse):
-//                guard let photoResults = photoResponse.self else {return}
-//                self.presenter?.noticeFetchedSuccess(noticeModelArray: [photoResults])
-//
-//                print(photoResults)
-//            case .failure( _):
-////                print("Error: \(error)")
-//                self.presenter?.noticeFetchFailed()
-//            }
-//        })
-//    }
-//
-//
-//}
-//

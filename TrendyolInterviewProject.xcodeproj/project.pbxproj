@@ -196,10 +196,10 @@
 		1E6CA1D324B312D300EFAE3C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				1E6CA1ED24B315E900EFAE3C /* SingleBannerCell.swift */,
-				1E6CA1EE24B315E900EFAE3C /* SingleBannerCell.xib */,
 				1E6CA1F124B3161900EFAE3C /* SingleBannerInternalCell.swift */,
 				1E6CA1F224B3161900EFAE3C /* SingleBannerInternalCell.xib */,
+				1E6CA1ED24B315E900EFAE3C /* SingleBannerCell.swift */,
+				1E6CA1EE24B315E900EFAE3C /* SingleBannerCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
