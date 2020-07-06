@@ -8,10 +8,10 @@
 
 import Foundation
 
-typealias listResponse = responseObject
+typealias listResponse = ResponseObject
 
 
-struct responseObject: Decodable {
+struct ResponseObject: Decodable {
     let widgets: [Widget]
 }
 
