@@ -8,7 +8,12 @@
 
 import Foundation
 
-typealias listResponse = [Widget]
+typealias listResponse = Opopularbject
+
+
+struct Opopularbject: Decodable {
+    let widgets: [Widget]
+}
 
 struct Widget: Decodable {
 
@@ -20,7 +25,7 @@ struct Widget: Decodable {
         let endDate : String?
         let eventKey : String?
         let id : Int?
-        let marketing : Marketing2?
+        let marketing : WidgetMarketing?
         let products : [Product]?
         let startDate : String?
         let title : String?
@@ -48,18 +53,18 @@ struct Widget: Decodable {
                 let values = try decoder.container(keyedBy: CodingKeys.self)
                 bannerContents = try values.decodeIfPresent([BannerContent].self, forKey: .bannerContents)
                 displayCount = try values.decodeIfPresent(Int.self, forKey: .displayCount)
-                displayOptions = try DisplayOption(from: decoder)
+                displayOptions = try values.decodeIfPresent(DisplayOption.self, forKey: .displayOptions)
                 displayOrder = try values.decodeIfPresent(Int.self, forKey: .displayOrder)
                 displayType = try values.decodeIfPresent(String.self, forKey: .displayType)
                 endDate = try values.decodeIfPresent(String.self, forKey: .endDate)
                 eventKey = try values.decodeIfPresent(String.self, forKey: .eventKey)
                 id = try values.decodeIfPresent(Int.self, forKey: .id)
-                marketing = try Marketing2(from: decoder)
-                products = try values.decodeIfPresent([Product].self, forKey: .products)
+                marketing = try values.decodeIfPresent(WidgetMarketing.self, forKey: .marketing)
+                products = try values.decodeIfPresent([Product].self, forKey: .products) //json fail
                 startDate = try values.decodeIfPresent(String.self, forKey: .startDate)
                 title = try values.decodeIfPresent(String.self, forKey: .title)
                 type = try values.decodeIfPresent(String.self, forKey: .type)
-                widgetNavigation = try WidgetNavigation(from: decoder)
+                widgetNavigation = try values.decodeIfPresent(WidgetNavigation.self, forKey: .widgetNavigation)
         }
 
 }
@@ -121,7 +126,7 @@ struct Product : Decodable {
         let ratingCount : Int?
         let rushDelivery : Bool?
         let salePrice : Float?
-        let stamps : [String]?
+        let stamps : [Stamps]?
         let stockStatus : Int?
         let variants : [Variant]?
 
@@ -184,7 +189,7 @@ struct Product : Decodable {
                 isDirectCartAdditionAvailable = try values.decodeIfPresent(Bool.self, forKey: .isDirectCartAdditionAvailable)
                 isGroupColorOptionsActive = try values.decodeIfPresent(Bool.self, forKey: .isGroupColorOptionsActive)
                 mainId = try values.decodeIfPresent(Int.self, forKey: .mainId)
-                marketing = try ProductMarketing(from: decoder)
+                marketing = try values.decodeIfPresent(ProductMarketing.self, forKey: .marketing)//ProductMarketing(from: decoder)
                 marketPrice = try values.decodeIfPresent(Float.self, forKey: .marketPrice)
                 merchantId = try values.decodeIfPresent(Int.self, forKey: .merchantId)
                 mOriginalPrice = try values.decodeIfPresent(Float.self, forKey: .mOriginalPrice)
@@ -195,11 +200,33 @@ struct Product : Decodable {
                 ratingCount = try values.decodeIfPresent(Int.self, forKey: .ratingCount)
                 rushDelivery = try values.decodeIfPresent(Bool.self, forKey: .rushDelivery)
                 salePrice = try values.decodeIfPresent(Float.self, forKey: .salePrice)
-                stamps = try values.decodeIfPresent([String].self, forKey: .stamps)
+                stamps = try values.decodeIfPresent([Stamps].self, forKey: .stamps)
                 stockStatus = try values.decodeIfPresent(Int.self, forKey: .stockStatus)
                 variants = try values.decodeIfPresent([Variant].self, forKey: .variants)
         }
 
+}
+
+struct Stamps: Decodable {
+     let imageUrl : String?
+    let position : String?
+    let type : String?
+    let aspectRatio : Float?
+    
+    enum CodingKeys: String, CodingKey {
+        case imageUrl = "imageUrl"
+        case position = "position"
+        case type = "type"
+        case aspectRatio = "aspectRatio"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        imageUrl = try values.decodeIfPresent(String.self, forKey: .imageUrl)
+        position = try values.decodeIfPresent(String.self, forKey: .position)
+        type = try values.decodeIfPresent(String.self, forKey: .type)
+        aspectRatio = try values.decodeIfPresent(Float.self, forKey: .aspectRatio)
+    }
 }
 
 struct Variant : Decodable {
@@ -225,7 +252,7 @@ struct Variant : Decodable {
                 campaignId = try values.decodeIfPresent(Int.self, forKey: .campaignId)
                 listingId = try values.decodeIfPresent(String.self, forKey: .listingId)
                 name = try values.decodeIfPresent(String.self, forKey: .name)
-                price = try Price(from: decoder)
+                price = try values.decodeIfPresent(Price.self, forKey: .price)
                 value = try values.decodeIfPresent(String.self, forKey: .value)
                 variantId = try values.decodeIfPresent(Int.self, forKey: .variantId)
         }
@@ -268,25 +295,6 @@ struct PromotionList: Decodable {
 
 }
 
-struct ProductMarketing: Decodable {
-
-        let delphoi : Delphoi1?
-        let enhanced : Enhanced?
-        let facebook : Facebook?
-
-        enum CodingKeys: String, CodingKey {
-                case delphoi = "delphoi"
-                case enhanced = "enhanced"
-                case facebook = "facebook"
-        }
-
-        init(from decoder: Decoder) throws {
-                delphoi = try Delphoi1(from: decoder)
-                enhanced = try Enhanced(from: decoder)
-                facebook = try Facebook(from: decoder)
-        }
-
-}
 
 struct Facebook : Decodable {
 
@@ -369,57 +377,125 @@ struct Enhanced: Decodable {
 
 }
 
-struct Delphoi1: Decodable {
-
-        let tv067 : String?
-
-        enum CodingKeys: String, CodingKey {
-                case tv067 = "tv067"
-        }
-
-        init(from decoder: Decoder) throws {
-                let values = try decoder.container(keyedBy: CodingKeys.self)
-                tv067 = try values.decodeIfPresent(String.self, forKey: .tv067)
-        }
-
+// MARK: - BannerContentMarketing
+struct BannerContentMarketing: Decodable {
+    let delphoi : PurpleDelphoi?
+    
+    enum CodingKeys: String, CodingKey {
+        case delphoi = "delphoi"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        delphoi = try values.decodeIfPresent(PurpleDelphoi.self, forKey: .delphoi)
+    }
 }
 
-struct Marketing2: Decodable {
-
-        let delphoi : Delphoi2?
-
-        enum CodingKeys: String, CodingKey {
-                case delphoi = "delphoi"
-        }
-
-        init(from decoder: Decoder) throws {
-                delphoi = try Delphoi2(from: decoder)
-        }
-
+// MARK: - PurpleDelphoi
+struct PurpleDelphoi: Decodable {
+    
+    let tv067 : String?
+    let tv068 : String?
+    let tv069 : String?
+    let tv070 : String?
+    let tv072 : String?
+    let tv073 : String?
+    let tv097 : String?
+    
+    enum CodingKeys: String, CodingKey {
+        case tv067 = "tv067"
+        case tv068 = "tv068"
+        case tv069 = "tv069"
+        case tv070 = "tv070"
+        case tv072 = "tv072"
+        case tv073 = "tv073"
+        case tv097 = "tv097"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        tv067 = try values.decodeIfPresent(String.self, forKey: .tv067)
+        tv068 = try values.decodeIfPresent(String.self, forKey: .tv068)
+        tv069 = try values.decodeIfPresent(String.self, forKey: .tv069)
+        tv070 = try values.decodeIfPresent(String.self, forKey: .tv070)
+        tv072 = try values.decodeIfPresent(String.self, forKey: .tv072)
+        tv073 = try values.decodeIfPresent(String.self, forKey: .tv073)
+        tv097 = try values.decodeIfPresent(String.self, forKey: .tv097)
+    }
+    
 }
 
-struct Delphoi2: Decodable {
+// MARK: - WidgetMarketing
+struct WidgetMarketing: Decodable {
+    let delphoi : FluffyDelphoi?
+    
+    enum CodingKeys: String, CodingKey {
+        case delphoi = "delphoi"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        delphoi = try values.decodeIfPresent(FluffyDelphoi.self, forKey: .delphoi)
+    }
+}
 
-        let tv070 : String?
-        let tv072 : String?
-        let tv073 : String?
-        let tv097 : String?
+// MARK: - FluffyDelphoi
+struct FluffyDelphoi: Decodable {
+//    let tv068: String?
+    let tv070 : String?
+    let tv072 : String?
+    let tv073 : String?
+    let tv097 : String?
+    
+    enum CodingKeys: String, CodingKey {
+        case tv070 = "tv070"
+        case tv072 = "tv072"
+        case tv073 = "tv073"
+        case tv097 = "tv097"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        tv070 = try values.decodeIfPresent(String.self, forKey: .tv070)
+        tv072 = try values.decodeIfPresent(String.self, forKey: .tv072)
+        tv073 = try values.decodeIfPresent(String.self, forKey: .tv073)
+        tv097 = try values.decodeIfPresent(String.self, forKey: .tv097)
+    }
+}
 
-        enum CodingKeys: String, CodingKey {
-                case tv070 = "tv070"
-                case tv072 = "tv072"
-                case tv073 = "tv073"
-                case tv097 = "tv097"
-        }
+// MARK: - ProductMarketing
+struct ProductMarketing: Decodable {
+    let delphoi : TentacledDelphoi?
+    let enhanced : Enhanced?
+    let facebook : Facebook?
+    
+    enum CodingKeys: String, CodingKey {
+        case delphoi = "delphoi"
+        case enhanced = "enhanced"
+        case facebook = "facebook"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        delphoi  = try values.decodeIfPresent(TentacledDelphoi.self, forKey: .delphoi) // = try TentacledDelphoi(from: decoder)
+        enhanced = try values.decodeIfPresent(Enhanced.self, forKey: .enhanced)//Enhanced(from: decoder)
+        facebook = try values.decodeIfPresent(Facebook.self, forKey: .facebook)//Facebook(from: decoder)
+    }
+    
+}
 
-        init(from decoder: Decoder) throws {
-                let values = try decoder.container(keyedBy: CodingKeys.self)
-                tv070 = try values.decodeIfPresent(String.self, forKey: .tv070)
-                tv072 = try values.decodeIfPresent(String.self, forKey: .tv072)
-                tv073 = try values.decodeIfPresent(String.self, forKey: .tv073)
-                tv097 = try values.decodeIfPresent(String.self, forKey: .tv097)
-        }
-
+// MARK: - TentacledDelphoi
+struct TentacledDelphoi: Decodable {
+    let tv067 : String?
+    
+    enum CodingKeys: String, CodingKey {
+        case tv067 = "tv067"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        tv067 = try values.decodeIfPresent(String.self, forKey: .tv067)// decode(String.self, forKey: .tv067)
+    }
 }
 
 struct DisplayOption: Decodable {
@@ -459,7 +535,7 @@ struct BannerContent: Decodable {
         let displayOrder : Int?
         let height : Int?
         let imageUrl : String?
-        let marketing : Marketing3?
+        let marketing : BannerContentMarketing?
         let navigation : Navigation?
         let width : Int?
 
@@ -481,8 +557,8 @@ struct BannerContent: Decodable {
                 displayOrder = try values.decodeIfPresent(Int.self, forKey: .displayOrder)
                 height = try values.decodeIfPresent(Int.self, forKey: .height)
                 imageUrl = try values.decodeIfPresent(String.self, forKey: .imageUrl)
-                marketing = try Marketing3(from: decoder)
-                navigation = try Navigation(from: decoder)
+                marketing = try values.decodeIfPresent(BannerContentMarketing.self, forKey: .marketing)
+                navigation = try values.decodeIfPresent(Navigation.self, forKey: .navigation)
                 width = try values.decodeIfPresent(Int.self, forKey: .width)
         }
 
@@ -511,53 +587,6 @@ struct Navigation : Decodable {
                 landingTitle = try values.decodeIfPresent(String.self, forKey: .landingTitle)
                 navigationType = try values.decodeIfPresent(String.self, forKey: .navigationType)
                 title = try values.decodeIfPresent(String.self, forKey: .title)
-        }
-
-}
-
-struct Marketing3 : Decodable {
-
-        let delphoi: Delphoi3?
-
-        enum CodingKeys: String, CodingKey {
-                case delphoi = "delphoi"
-        }
-
-        init(from decoder: Decoder) throws {
-                delphoi = try Delphoi3(from: decoder)
-        }
-
-}
-
-struct Delphoi3 : Decodable {
-
-        let tv067 : String?
-        let tv068 : String?
-        let tv069 : String?
-        let tv070 : String?
-        let tv072 : String?
-        let tv073 : String?
-        let tv097 : String?
-
-        enum CodingKeys: String, CodingKey {
-                case tv067 = "tv067"
-                case tv068 = "tv068"
-                case tv069 = "tv069"
-                case tv070 = "tv070"
-                case tv072 = "tv072"
-                case tv073 = "tv073"
-                case tv097 = "tv097"
-        }
-
-        init(from decoder: Decoder) throws {
-                let values = try decoder.container(keyedBy: CodingKeys.self)
-                tv067 = try values.decodeIfPresent(String.self, forKey: .tv067)
-                tv068 = try values.decodeIfPresent(String.self, forKey: .tv068)
-                tv069 = try values.decodeIfPresent(String.self, forKey: .tv069)
-                tv070 = try values.decodeIfPresent(String.self, forKey: .tv070)
-                tv072 = try values.decodeIfPresent(String.self, forKey: .tv072)
-                tv073 = try values.decodeIfPresent(String.self, forKey: .tv073)
-                tv097 = try values.decodeIfPresent(String.self, forKey: .tv097)
         }
 
 }
