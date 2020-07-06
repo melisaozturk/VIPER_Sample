@@ -8,10 +8,10 @@
 
 import Foundation
 
-typealias listResponse = Opopularbject
+typealias listResponse = responseObject
 
 
-struct Opopularbject: Decodable {
+struct responseObject: Decodable {
     let widgets: [Widget]
 }
 
