@@ -1,5 +1,5 @@
 //
-//  SingleBannerInternalCell.swift
+//  ProductSliderInternalCell.swift
 //  TrendyolInterviewProject
 //
 //  Created by melisa öztürk on 6.07.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SingleBannerInternalCell: UICollectionViewCell {
+class ProductSliderInternalCell: UICollectionViewCell {
 
     @IBOutlet weak var imgContent: UIImageView!
     

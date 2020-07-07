@@ -1,5 +1,5 @@
 //
-//  SingleBannerCell.swift
+//  ProductSliderCell.swift
 //  TrendyolInterviewProject
 //
 //  Created by melisa öztürk on 6.07.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SingleBannerCell: UITableViewCell {
+class ProductSliderCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -55,27 +55,26 @@ class SingleBannerCell: UITableViewCell {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         
-        collectionView.register(UINib(nibName: "SingleBannerInternalCell", bundle: nil), forCellWithReuseIdentifier: "SingleBannerInternalCell")
+        collectionView.register(UINib(nibName: "ProductSliderInternalCell", bundle: nil), forCellWithReuseIdentifier: "ProductSliderInternalCell")
     }
 }
 
-extension SingleBannerCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ProductSliderCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return widgets.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SingleBannerInternalCell", for: indexPath) as! SingleBannerInternalCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductSliderInternalCell", for: indexPath) as! ProductSliderInternalCell
 //        let cellType = listArray![indexPath.row].widgets.map({ (displayType) in
 //            displayType.displayType
 //        })
-        
         return cell
     }
 }
 
-extension SingleBannerCell: UICollectionViewDelegateFlowLayout {
+extension ProductSliderCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
