@@ -28,7 +28,12 @@ class ListViewController: UIViewController {
 //        UIManager.shared().showLoading(view: self.view)
         presenter?.startFetchingData()
         self.tableRegister()
-
+        self.navigationRegister()
+    }
+    
+    private func navigationRegister() {
+//        self.navigationController?.navigationBar.topItem?.title = "Trendyol"
+//        self.navigationBar.topItem?.title = "Trendyol"
     }
     
     private func tableRegister() {

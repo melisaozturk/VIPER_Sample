@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,6 +31,7 @@
 		1E6CA1F724B3C3C400EFAE3C /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6CA1F624B3C3C300EFAE3C /* UIManager.swift */; };
 		1E6CA1FA24B3C55800EFAE3C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6CA1F924B3C55800EFAE3C /* LoadingView.swift */; };
 		1E6CA1FC24B3C56100EFAE3C /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E6CA1FB24B3C56100EFAE3C /* LoadingView.xib */; };
+		1E72FE6824B4BED20002F852 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E72FE6724B4BED20002F852 /* Constants.swift */; };
 		3E06616B300F36CABC1135CF /* Pods_TrendyolInterviewProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55ABB676EE43576FFE15884 /* Pods_TrendyolInterviewProject.framework */; };
 		B4F4573459C01AFED7AB24F2 /* Pods_TrendyolInterviewProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30654A1B096AC26254F64BD /* Pods_TrendyolInterviewProjectUITests.framework */; };
 		B767D0DB8AEE4B1706ADF233 /* Pods_TrendyolInterviewProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8278838823CEB96A9CDCAE1E /* Pods_TrendyolInterviewProjectTests.framework */; };
@@ -86,6 +87,7 @@
 		1E6CA1F624B3C3C300EFAE3C /* UIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIManager.swift; sourceTree = "<group>"; };
 		1E6CA1F924B3C55800EFAE3C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		1E6CA1FB24B3C56100EFAE3C /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		1E72FE6724B4BED20002F852 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2B75F11944D5335CF8C50F29 /* Pods-TrendyolInterviewProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyolInterviewProjectTests.release.xcconfig"; path = "Target Support Files/Pods-TrendyolInterviewProjectTests/Pods-TrendyolInterviewProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		2BB4827DBAE948519EAD5314 /* Pods-TrendyolInterviewProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyolInterviewProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-TrendyolInterviewProjectTests/Pods-TrendyolInterviewProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A1799F6A3F4669A91E2DFFB /* Pods-TrendyolInterviewProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyolInterviewProject.debug.xcconfig"; path = "Target Support Files/Pods-TrendyolInterviewProject/Pods-TrendyolInterviewProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,7 +135,6 @@
 				5A15826858A29787AE423143 /* Pods-TrendyolInterviewProjectUITests.debug.xcconfig */,
 				142A426FF24CA5825410CDD0 /* Pods-TrendyolInterviewProjectUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -205,6 +206,7 @@
 			children = (
 				1E6CA1F824B3C54500EFAE3C /* Loading */,
 				1E6CA1F624B3C3C300EFAE3C /* UIManager.swift */,
+				1E72FE6724B4BED20002F852 /* Constants.swift */,
 				1E6CA19F24B311FB00EFAE3C /* AppDelegate.swift */,
 				1E6CA1A124B311FB00EFAE3C /* SceneDelegate.swift */,
 				1E6CA1A824B3120000EFAE3C /* Assets.xcassets */,
@@ -537,6 +539,7 @@
 				1E6CA1FA24B3C55800EFAE3C /* LoadingView.swift in Sources */,
 				1E6CA1F724B3C3C400EFAE3C /* UIManager.swift in Sources */,
 				1E6CA1D924B3131300EFAE3C /* ListWireframe.swift in Sources */,
+				1E72FE6824B4BED20002F852 /* Constants.swift in Sources */,
 				1E6CA1A024B311FB00EFAE3C /* AppDelegate.swift in Sources */,
 				1E6CA1A224B311FB00EFAE3C /* SceneDelegate.swift in Sources */,
 				1E6CA1DE24B3133B00EFAE3C /* ListModel.swift in Sources */,
