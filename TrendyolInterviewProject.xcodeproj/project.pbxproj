@@ -28,6 +28,9 @@
 		1E6CA1F024B315E900EFAE3C /* SingleBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E6CA1EE24B315E900EFAE3C /* SingleBannerCell.xib */; };
 		1E6CA1F324B3161900EFAE3C /* SingleBannerInternalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6CA1F124B3161900EFAE3C /* SingleBannerInternalCell.swift */; };
 		1E6CA1F424B3161900EFAE3C /* SingleBannerInternalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E6CA1F224B3161900EFAE3C /* SingleBannerInternalCell.xib */; };
+		1E6CA1F724B3C3C400EFAE3C /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6CA1F624B3C3C300EFAE3C /* UIManager.swift */; };
+		1E6CA1FA24B3C55800EFAE3C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6CA1F924B3C55800EFAE3C /* LoadingView.swift */; };
+		1E6CA1FC24B3C56100EFAE3C /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E6CA1FB24B3C56100EFAE3C /* LoadingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		1E6CA1EE24B315E900EFAE3C /* SingleBannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleBannerCell.xib; sourceTree = "<group>"; };
 		1E6CA1F124B3161900EFAE3C /* SingleBannerInternalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleBannerInternalCell.swift; sourceTree = "<group>"; };
 		1E6CA1F224B3161900EFAE3C /* SingleBannerInternalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleBannerInternalCell.xib; sourceTree = "<group>"; };
+		1E6CA1F624B3C3C300EFAE3C /* UIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIManager.swift; sourceTree = "<group>"; };
+		1E6CA1F924B3C55800EFAE3C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		1E6CA1FB24B3C56100EFAE3C /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,8 @@
 		1E6CA1CF24B312A200EFAE3C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1E6CA1F824B3C54500EFAE3C /* Loading */,
+				1E6CA1F624B3C3C300EFAE3C /* UIManager.swift */,
 				1E6CA19F24B311FB00EFAE3C /* AppDelegate.swift */,
 				1E6CA1A124B311FB00EFAE3C /* SceneDelegate.swift */,
 				1E6CA1A824B3120000EFAE3C /* Assets.xcassets */,
@@ -196,10 +204,7 @@
 		1E6CA1D324B312D300EFAE3C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				1E6CA1F124B3161900EFAE3C /* SingleBannerInternalCell.swift */,
-				1E6CA1F224B3161900EFAE3C /* SingleBannerInternalCell.xib */,
-				1E6CA1ED24B315E900EFAE3C /* SingleBannerCell.swift */,
-				1E6CA1EE24B315E900EFAE3C /* SingleBannerCell.xib */,
+				1E6CA1F524B3AE9600EFAE3C /* SingleBanner */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -237,6 +242,26 @@
 				1E6CA1EB24B3157300EFAE3C /* Protocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1E6CA1F524B3AE9600EFAE3C /* SingleBanner */ = {
+			isa = PBXGroup;
+			children = (
+				1E6CA1F124B3161900EFAE3C /* SingleBannerInternalCell.swift */,
+				1E6CA1F224B3161900EFAE3C /* SingleBannerInternalCell.xib */,
+				1E6CA1ED24B315E900EFAE3C /* SingleBannerCell.swift */,
+				1E6CA1EE24B315E900EFAE3C /* SingleBannerCell.xib */,
+			);
+			path = SingleBanner;
+			sourceTree = "<group>";
+		};
+		1E6CA1F824B3C54500EFAE3C /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				1E6CA1F924B3C55800EFAE3C /* LoadingView.swift */,
+				1E6CA1FB24B3C56100EFAE3C /* LoadingView.xib */,
+			);
+			path = Loading;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +371,7 @@
 				1E6CA1AC24B3120000EFAE3C /* LaunchScreen.storyboard in Resources */,
 				1E6CA1F024B315E900EFAE3C /* SingleBannerCell.xib in Resources */,
 				1E6CA1F424B3161900EFAE3C /* SingleBannerInternalCell.xib in Resources */,
+				1E6CA1FC24B3C56100EFAE3C /* LoadingView.xib in Resources */,
 				1E6CA1A924B3120000EFAE3C /* Assets.xcassets in Resources */,
 				1E6CA1A724B311FB00EFAE3C /* Main.storyboard in Resources */,
 			);
@@ -377,6 +403,8 @@
 				1E6CA1DB24B3132800EFAE3C /* ListInteractor.swift in Sources */,
 				1E6CA1E524B3146E00EFAE3C /* Endpoint.swift in Sources */,
 				1E6CA1EC24B3157300EFAE3C /* Protocols.swift in Sources */,
+				1E6CA1FA24B3C55800EFAE3C /* LoadingView.swift in Sources */,
+				1E6CA1F724B3C3C400EFAE3C /* UIManager.swift in Sources */,
 				1E6CA1D924B3131300EFAE3C /* ListWireframe.swift in Sources */,
 				1E6CA1A024B311FB00EFAE3C /* AppDelegate.swift in Sources */,
 				1E6CA1A224B311FB00EFAE3C /* SceneDelegate.swift in Sources */,

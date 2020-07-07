@@ -20,7 +20,7 @@ protocol ViewToPresenterProtocol: class{
 }
 
 protocol PresenterToViewProtocol: class{
-    func showList(listArray:Array<listResponse>)
+    func showList(listArray: [listResponse])
     func showError()
 }
 

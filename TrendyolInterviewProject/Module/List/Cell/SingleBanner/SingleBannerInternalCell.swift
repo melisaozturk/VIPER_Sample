@@ -1,5 +1,5 @@
 //
-//  SingleBannerCell.swift
+//  SingleBannerInternalCell.swift
 //  TrendyolInterviewProject
 //
 //  Created by melisa öztürk on 6.07.2020.
@@ -8,17 +8,13 @@
 
 import UIKit
 
-class SingleBannerCell: UITableViewCell {
+class SingleBannerInternalCell: UICollectionViewCell {
 
+    @IBOutlet weak var imgContent: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

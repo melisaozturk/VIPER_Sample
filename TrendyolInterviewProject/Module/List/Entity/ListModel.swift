@@ -10,7 +10,6 @@ import Foundation
 
 typealias listResponse = ResponseObject
 
-
 struct ResponseObject: Decodable {
     let widgets: [Widget]
 }
