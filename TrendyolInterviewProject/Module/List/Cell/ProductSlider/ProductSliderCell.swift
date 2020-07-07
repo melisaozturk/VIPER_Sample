@@ -70,14 +70,25 @@ extension ProductSliderCell: UICollectionViewDelegate, UICollectionViewDataSourc
 //        let cellType = listArray![indexPath.row].widgets.map({ (displayType) in
 //            displayType.displayType
 //        })
+//        let contents = self.widgets[indexPath.row].bannerContents
+//        let img = contents?.compactMap{$0.imageUrl}
+        
+//        cell.imgContent.image = UIImage(named: "https://cdn.dsmcdn.com/marketing/widget/designers/deniztatili.jpg")
+//UIImage(named: img![0])
+        
+        cell.lblTitle.text = "melisa"
+        cell.contentView.layer.borderWidth = 1.0
+        cell.contentView.layer.borderColor = UIColor.black.cgColor
+        cell.isUserInteractionEnabled = true
+        
         return cell
-    }
+    }        
 }
 
 extension ProductSliderCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: self.collectionView.frame.width, height: self.collectionView.frame.height)
+        return CGSize(width: self.collectionView.frame.width / 2, height: self.collectionView.frame.height)
     }
 }

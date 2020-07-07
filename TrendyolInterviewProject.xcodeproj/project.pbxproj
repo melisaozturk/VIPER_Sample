@@ -204,7 +204,7 @@
 		1E6CA1D324B312D300EFAE3C /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				1E6CA1F524B3AE9600EFAE3C /* SingleBanner */,
+				1E6CA1F524B3AE9600EFAE3C /* ProductSlider */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -244,7 +244,7 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		1E6CA1F524B3AE9600EFAE3C /* SingleBanner */ = {
+		1E6CA1F524B3AE9600EFAE3C /* ProductSlider */ = {
 			isa = PBXGroup;
 			children = (
 				1E6CA1F124B3161900EFAE3C /* ProductSliderInternalCell.swift */,
@@ -252,7 +252,7 @@
 				1E6CA1ED24B315E900EFAE3C /* ProductSliderCell.swift */,
 				1E6CA1EE24B315E900EFAE3C /* ProductSliderCell.xib */,
 			);
-			path = SingleBanner;
+			path = ProductSlider;
 			sourceTree = "<group>";
 		};
 		1E6CA1F824B3C54500EFAE3C /* Loading */ = {
