@@ -31,6 +31,9 @@
 		1E6CA1F724B3C3C400EFAE3C /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6CA1F624B3C3C300EFAE3C /* UIManager.swift */; };
 		1E6CA1FA24B3C55800EFAE3C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6CA1F924B3C55800EFAE3C /* LoadingView.swift */; };
 		1E6CA1FC24B3C56100EFAE3C /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E6CA1FB24B3C56100EFAE3C /* LoadingView.xib */; };
+		3E06616B300F36CABC1135CF /* Pods_TrendyolInterviewProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55ABB676EE43576FFE15884 /* Pods_TrendyolInterviewProject.framework */; };
+		B4F4573459C01AFED7AB24F2 /* Pods_TrendyolInterviewProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30654A1B096AC26254F64BD /* Pods_TrendyolInterviewProjectUITests.framework */; };
+		B767D0DB8AEE4B1706ADF233 /* Pods_TrendyolInterviewProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8278838823CEB96A9CDCAE1E /* Pods_TrendyolInterviewProjectTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02F324128FDFB51320C4348C /* Pods-TrendyolInterviewProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyolInterviewProject.release.xcconfig"; path = "Target Support Files/Pods-TrendyolInterviewProject/Pods-TrendyolInterviewProject.release.xcconfig"; sourceTree = "<group>"; };
+		142A426FF24CA5825410CDD0 /* Pods-TrendyolInterviewProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyolInterviewProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-TrendyolInterviewProjectUITests/Pods-TrendyolInterviewProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1E6CA19C24B311FB00EFAE3C /* TrendyolInterviewProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendyolInterviewProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E6CA19F24B311FB00EFAE3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E6CA1A124B311FB00EFAE3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +86,13 @@
 		1E6CA1F624B3C3C300EFAE3C /* UIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIManager.swift; sourceTree = "<group>"; };
 		1E6CA1F924B3C55800EFAE3C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		1E6CA1FB24B3C56100EFAE3C /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		2B75F11944D5335CF8C50F29 /* Pods-TrendyolInterviewProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyolInterviewProjectTests.release.xcconfig"; path = "Target Support Files/Pods-TrendyolInterviewProjectTests/Pods-TrendyolInterviewProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		2BB4827DBAE948519EAD5314 /* Pods-TrendyolInterviewProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyolInterviewProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-TrendyolInterviewProjectTests/Pods-TrendyolInterviewProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A1799F6A3F4669A91E2DFFB /* Pods-TrendyolInterviewProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyolInterviewProject.debug.xcconfig"; path = "Target Support Files/Pods-TrendyolInterviewProject/Pods-TrendyolInterviewProject.debug.xcconfig"; sourceTree = "<group>"; };
+		5A15826858A29787AE423143 /* Pods-TrendyolInterviewProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyolInterviewProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-TrendyolInterviewProjectUITests/Pods-TrendyolInterviewProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8278838823CEB96A9CDCAE1E /* Pods_TrendyolInterviewProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrendyolInterviewProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30654A1B096AC26254F64BD /* Pods_TrendyolInterviewProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrendyolInterviewProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F55ABB676EE43576FFE15884 /* Pods_TrendyolInterviewProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrendyolInterviewProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E06616B300F36CABC1135CF /* Pods_TrendyolInterviewProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B767D0DB8AEE4B1706ADF233 /* Pods_TrendyolInterviewProjectTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,12 +116,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F4573459C01AFED7AB24F2 /* Pods_TrendyolInterviewProjectUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C4A1B41BD27DA5F97B8578D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A1799F6A3F4669A91E2DFFB /* Pods-TrendyolInterviewProject.debug.xcconfig */,
+				02F324128FDFB51320C4348C /* Pods-TrendyolInterviewProject.release.xcconfig */,
+				2BB4827DBAE948519EAD5314 /* Pods-TrendyolInterviewProjectTests.debug.xcconfig */,
+				2B75F11944D5335CF8C50F29 /* Pods-TrendyolInterviewProjectTests.release.xcconfig */,
+				5A15826858A29787AE423143 /* Pods-TrendyolInterviewProjectUITests.debug.xcconfig */,
+				142A426FF24CA5825410CDD0 /* Pods-TrendyolInterviewProjectUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1785E99EC42714CF0D0ECE5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F55ABB676EE43576FFE15884 /* Pods_TrendyolInterviewProject.framework */,
+				8278838823CEB96A9CDCAE1E /* Pods_TrendyolInterviewProjectTests.framework */,
+				F30654A1B096AC26254F64BD /* Pods_TrendyolInterviewProjectUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1E6CA19324B311FB00EFAE3C = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +154,8 @@
 				1E6CA1B524B3120000EFAE3C /* TrendyolInterviewProjectTests */,
 				1E6CA1C024B3120000EFAE3C /* TrendyolInterviewProjectUITests */,
 				1E6CA19D24B311FB00EFAE3C /* Products */,
+				0C4A1B41BD27DA5F97B8578D /* Pods */,
+				1785E99EC42714CF0D0ECE5B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -271,9 +312,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E6CA1C624B3120000EFAE3C /* Build configuration list for PBXNativeTarget "TrendyolInterviewProject" */;
 			buildPhases = (
+				462CE999AD28561B3EA07777 /* [CP] Check Pods Manifest.lock */,
 				1E6CA19824B311FB00EFAE3C /* Sources */,
 				1E6CA19924B311FB00EFAE3C /* Frameworks */,
 				1E6CA19A24B311FB00EFAE3C /* Resources */,
+				D20CD4A01CEDB48A0B58E3BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,6 +331,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E6CA1C924B3120000EFAE3C /* Build configuration list for PBXNativeTarget "TrendyolInterviewProjectTests" */;
 			buildPhases = (
+				C25D4301BB3C3ABA46AA4894 /* [CP] Check Pods Manifest.lock */,
 				1E6CA1AE24B3120000EFAE3C /* Sources */,
 				1E6CA1AF24B3120000EFAE3C /* Frameworks */,
 				1E6CA1B024B3120000EFAE3C /* Resources */,
@@ -306,6 +350,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E6CA1CC24B3120000EFAE3C /* Build configuration list for PBXNativeTarget "TrendyolInterviewProjectUITests" */;
 			buildPhases = (
+				B364F3337B9910BDC7B7C7BF /* [CP] Check Pods Manifest.lock */,
 				1E6CA1B924B3120000EFAE3C /* Sources */,
 				1E6CA1BA24B3120000EFAE3C /* Frameworks */,
 				1E6CA1BB24B3120000EFAE3C /* Resources */,
@@ -392,6 +437,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		462CE999AD28561B3EA07777 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrendyolInterviewProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B364F3337B9910BDC7B7C7BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrendyolInterviewProjectUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C25D4301BB3C3ABA46AA4894 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrendyolInterviewProjectTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D20CD4A01CEDB48A0B58E3BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrendyolInterviewProject/Pods-TrendyolInterviewProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrendyolInterviewProject/Pods-TrendyolInterviewProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrendyolInterviewProject/Pods-TrendyolInterviewProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1E6CA19824B311FB00EFAE3C /* Sources */ = {
@@ -584,6 +715,7 @@
 		};
 		1E6CA1C724B3120000EFAE3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A1799F6A3F4669A91E2DFFB /* Pods-TrendyolInterviewProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -602,6 +734,7 @@
 		};
 		1E6CA1C824B3120000EFAE3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02F324128FDFB51320C4348C /* Pods-TrendyolInterviewProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -620,6 +753,7 @@
 		};
 		1E6CA1CA24B3120000EFAE3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BB4827DBAE948519EAD5314 /* Pods-TrendyolInterviewProjectTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -642,6 +776,7 @@
 		};
 		1E6CA1CB24B3120000EFAE3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B75F11944D5335CF8C50F29 /* Pods-TrendyolInterviewProjectTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -664,6 +799,7 @@
 		};
 		1E6CA1CD24B3120000EFAE3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A15826858A29787AE423143 /* Pods-TrendyolInterviewProjectUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -684,6 +820,7 @@
 		};
 		1E6CA1CE24B3120000EFAE3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 142A426FF24CA5825410CDD0 /* Pods-TrendyolInterviewProjectUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,6 @@
+framework module Pods_TrendyolInterviewProject {
+  umbrella header "Pods-TrendyolInterviewProject-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -10,7 +10,7 @@ import UIKit
 
 class ProductSliderInternalCell: UICollectionViewCell {
 
-    @IBOutlet weak var imgContent: UIImageView!
+    @IBOutlet var imgContent: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
     
     override func awakeFromNib() {

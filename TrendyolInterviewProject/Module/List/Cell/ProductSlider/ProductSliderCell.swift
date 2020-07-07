@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProductSliderCell: UITableViewCell {
 
@@ -70,16 +71,15 @@ extension ProductSliderCell: UICollectionViewDelegate, UICollectionViewDataSourc
 //        let cellType = listArray![indexPath.row].widgets.map({ (displayType) in
 //            displayType.displayType
 //        })
-//        let contents = self.widgets[indexPath.row].bannerContents
-//        let img = contents?.compactMap{$0.imageUrl}
         
-//        cell.imgContent.image = UIImage(named: "https://cdn.dsmcdn.com/marketing/widget/designers/deniztatili.jpg")
-//UIImage(named: img![0])
+        let contents = self.widgets[indexPath.row].bannerContents
         
-        cell.lblTitle.text = "melisa"
+        let url = URL(string: contents![0].imageUrl!)
+        cell.imgContent.kf.setImage(with: url)
+        cell.lblTitle.text = contents![0].navigation!.title
         cell.contentView.layer.borderWidth = 1.0
         cell.contentView.layer.borderColor = UIColor.black.cgColor
-        cell.isUserInteractionEnabled = true
+//        cell.isUserInteractionEnabled = true
         
         return cell
     }        
