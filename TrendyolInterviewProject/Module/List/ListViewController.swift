@@ -17,7 +17,7 @@ class ListViewController: UIViewController {
     var widgets = [Widget]()
     var cellArray = ["SingleBannerCell", "ProductSliderCell"]
     var singleBannerContents = [BannerContent]()
-    var productSliderContents = [Product]()
+    var productSliderProduct = [Product]()
     var titles = [String]()
     
     override func viewDidLoad() {
@@ -42,11 +42,8 @@ class ListViewController: UIViewController {
     
     @objc func goDetail(_ notification: Notification) {
         if let dict = notification.userInfo as NSDictionary? {
-            if let data = dict["Select"] as? Bool {
-                if data {
-                    presenter?.showDetailController(navigationController: navigationController!, data: productSliderContents)
-                    
-                }
+            if let row = dict["SelectedCell"] as? Int {
+                    presenter?.showDetailController(navigationController: navigationController!, data: productSliderProduct[row])
             }
         }
     }
@@ -75,7 +72,7 @@ class ListViewController: UIViewController {
                 
                 if widget.displayType == "SLIDER" && widget.type == "PRODUCT" {
                     if let products = widget.products {
-                        self.productSliderContents.append(contentsOf: products)
+                        self.productSliderProduct.append(contentsOf: products)
                     }
                 }
             }
@@ -96,7 +93,7 @@ extension ListViewController:PresenterToViewProtocol{
         self.tableView.reloadData()
 
         UIManager.shared().removeLoading(view: self.view)
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "listData"), object: nil, userInfo: ["listArray":widgets])
+//        NotificationCenter.default.post(name: Notification.Name(rawValue: "listData"), object: nil, userInfo: ["listArray":widgets])
     }
     
     func showError() {
@@ -142,8 +139,8 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             }
         case 1:
             cell = tableView.dequeueReusableCell(withIdentifier: "ProductSliderCell", for: indexPath) as! ProductSliderCell
-            if !self.productSliderContents.isEmpty {
-                (cell as! ProductSliderCell).products = self.productSliderContents
+            if !self.productSliderProduct.isEmpty {
+                (cell as! ProductSliderCell).products = self.productSliderProduct
                 (cell as! ProductSliderCell).collectionView.reloadData()
             }
         default:
@@ -154,18 +151,19 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.section {
+        case 0:
+            if !singleBannerContents.isEmpty {
+                if let contentHeight = singleBannerContents[indexPath.row].height {
+                    return CGFloat(contentHeight)
+                }
+            }
+        case 1:
+            return 200
+        default:
+            return 200
+        }
         return 200
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.showDetailController(navigationController: navigationController!, data: self.singleBannerContents)
-//
-//        for data in self.singleBannerWidgets {
-//                if let contents = data.bannerContents {
-//                    presenter?.showDetailController(navigationController: navigationController!, data: contents)
-//                    break
-//            }
-//        }
     }
     
 }

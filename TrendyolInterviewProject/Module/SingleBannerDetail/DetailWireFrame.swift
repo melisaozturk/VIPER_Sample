@@ -27,8 +27,8 @@ class DetailWireframe: DetailPresenterToWireframeProtocol {
         presenter.interactor = interactor
         interactor.presenter = presenter
         
-        if let contentData = data {
-            detailVC.bannerContent = contentData as? [BannerContent]
+        if let product = data {
+            detailVC.product = product as? Product
         }
         
         return detailVC

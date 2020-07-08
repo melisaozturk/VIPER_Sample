@@ -77,29 +77,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xyY-Lg-pBh">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="20" minimumInteritemSpacing="20" id="ae7-dY-eeR">
-                                    <size key="itemSize" width="232" height="254"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ViD-af-fpS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="448"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="09f-Qd-d8D">
+                                        <rect key="frame" x="5" y="401" width="404" height="37"/>
+                                    </pageControl>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AOX-6U-rlQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSy-2x-sfa">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="RzK-1j-EgG"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="J0L-c1-w7t"/>
+                                    </scrollView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="09f-Qd-d8D" secondAttribute="bottom" constant="10" id="AiQ-ax-abk"/>
+                                    <constraint firstItem="09f-Qd-d8D" firstAttribute="leading" secondItem="ViD-af-fpS" secondAttribute="leading" constant="5" id="NXq-Io-F0c"/>
+                                    <constraint firstAttribute="trailing" secondItem="09f-Qd-d8D" secondAttribute="trailing" constant="5" id="gdL-nR-8cV"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xyY-Lg-pBh" firstAttribute="top" secondItem="jZO-gS-eag" secondAttribute="top" id="6Gd-0h-rgh"/>
-                            <constraint firstItem="xyY-Lg-pBh" firstAttribute="leading" secondItem="jZO-gS-eag" secondAttribute="leading" id="8jJ-4F-Kjv"/>
-                            <constraint firstItem="jZO-gS-eag" firstAttribute="trailing" secondItem="xyY-Lg-pBh" secondAttribute="trailing" id="CFQ-0W-ksz"/>
-                            <constraint firstItem="jZO-gS-eag" firstAttribute="bottom" secondItem="xyY-Lg-pBh" secondAttribute="bottom" id="drh-3q-dRC"/>
+                            <constraint firstItem="ViD-af-fpS" firstAttribute="centerX" secondItem="2aH-uO-sIY" secondAttribute="centerX" id="KoQ-eu-krm"/>
+                            <constraint firstItem="ViD-af-fpS" firstAttribute="height" secondItem="2aH-uO-sIY" secondAttribute="height" multiplier="5:10" id="VCc-YV-Of8"/>
+                            <constraint firstItem="ViD-af-fpS" firstAttribute="top" secondItem="jZO-gS-eag" secondAttribute="top" id="YeF-2M-ITj"/>
+                            <constraint firstItem="ViD-af-fpS" firstAttribute="width" secondItem="2aH-uO-sIY" secondAttribute="width" multiplier="10:10" id="soL-bh-kVn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jZO-gS-eag"/>
                     </view>
                     <connections>
-                        <outlet property="productListingCollectionView" destination="xyY-Lg-pBh" id="GQH-ho-Afc"/>
+                        <outlet property="pageControl" destination="09f-Qd-d8D" id="Ihc-iN-tVK"/>
+                        <outlet property="scrollView" destination="AOX-6U-rlQ" id="OV1-73-DRp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ss0-JB-Oxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
