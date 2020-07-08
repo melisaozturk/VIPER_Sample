@@ -34,7 +34,7 @@ class ListInteractor: ApiClient, PresenterToInteractorProtocol {
             case .failure( _):
                 self.presenter?.listFetchFailed()
                 #if DEBUG
-                print("Error")
+                print("List Fetch Failed")
                 #endif
             }
         })

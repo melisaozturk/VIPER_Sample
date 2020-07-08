@@ -19,8 +19,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3VZ-3C-cLe">
                         <rect key="frame" x="0.0" y="0.0" width="353" height="576"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="x6M-74-QB2">
-                                <rect key="frame" x="0.0" y="-1" width="353" height="577"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x6M-74-QB2">
+                                <rect key="frame" x="0.0" y="0.0" width="353" height="576"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zp-R3-HZr">
                                 <rect key="frame" x="10" y="536" width="333" height="20"/>
@@ -60,7 +60,4 @@
             <point key="canvasLocation" x="207.97101449275365" y="87.723214285714278"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-    </resources>
 </document>

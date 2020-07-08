@@ -83,6 +83,6 @@ extension ProductSliderCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: self.collectionView.frame.width / 2, height: self.collectionView.frame.height)
+        return CGSize(width: self.collectionView.frame.width / 3, height: self.collectionView.frame.height)
     }
 }
