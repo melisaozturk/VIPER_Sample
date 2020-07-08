@@ -14,8 +14,8 @@ class SingleBannerCell: UITableViewCell {
     @IBOutlet weak var imgProduct: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
     
-    var contents = [BannerContent]()
-    
+    var contents = [BannerContent]()    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         NotificationCenter.default.addObserver(self, selector: #selector(getData(_:)), name: NSNotification.Name(rawValue: "listData"), object: nil)

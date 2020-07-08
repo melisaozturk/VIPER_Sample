@@ -70,6 +70,7 @@ extension ProductSliderCell: UICollectionViewDelegate, UICollectionViewDataSourc
         let url = URL(string: self.products[indexPath.row].imageUrl!)
         cell.imgContent.kf.setImage(with: url)
         cell.lblTitle.text = self.products[indexPath.row].name!
+
         
         return cell
     }

@@ -15,8 +15,7 @@ protocol ViewToPresenterProtocol: class{
     var interactor: PresenterToInteractorProtocol? {get set}
     var wireframe: PresenterToWireframeProtocol? {get set}
     func startFetchingData()
-    func showDetailController(navigationController:UINavigationController)
-    func back(navigationConroller:UINavigationController)
+    func showDetailController(navigationController:UINavigationController, data: Any)
 }
 
 protocol PresenterToViewProtocol: class{
@@ -26,8 +25,7 @@ protocol PresenterToViewProtocol: class{
 
 protocol PresenterToWireframeProtocol: class {
     static func createListModule() -> ListViewController
-    func pushToDetailPage(navigationConroller:UINavigationController)
-    func back(navigationConroller:UINavigationController)
+    func pushToDetailPage(navigationConroller:UINavigationController, data: Any)
 }
 
 protocol PresenterToInteractorProtocol: class {
@@ -36,6 +34,6 @@ protocol PresenterToInteractorProtocol: class {
 }
 
 protocol InteractorToPresenterProtocol: class {
-    func listFetchedSuccess(listModelArray:Array<listResponse>)
+    func listFetchedSuccess(listModelArray: [listResponse])
     func listFetchFailed()
 }

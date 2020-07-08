@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E445B1824B5DEA600057E6F /* DetailWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E445B1324B5DEA600057E6F /* DetailWireFrame.swift */; };
+		1E445B1924B5DEA600057E6F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E445B1424B5DEA600057E6F /* DetailViewController.swift */; };
+		1E445B1A24B5DEA600057E6F /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E445B1524B5DEA600057E6F /* DetailPresenter.swift */; };
+		1E445B1B24B5DEA600057E6F /* DetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E445B1624B5DEA600057E6F /* DetailProtocols.swift */; };
+		1E445B1C24B5DEA600057E6F /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E445B1724B5DEA600057E6F /* DetailInteractor.swift */; };
+		1E445B2124B5FBBB00057E6F /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E445B2024B5FBBB00057E6F /* Header.swift */; };
+		1E445B2324B5FBC300057E6F /* Header.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E445B2224B5FBC300057E6F /* Header.xib */; };
 		1E6CA1A024B311FB00EFAE3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6CA19F24B311FB00EFAE3C /* AppDelegate.swift */; };
 		1E6CA1A224B311FB00EFAE3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6CA1A124B311FB00EFAE3C /* SceneDelegate.swift */; };
 		1E6CA1A724B311FB00EFAE3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6CA1A524B311FB00EFAE3C /* Main.storyboard */; };
@@ -34,6 +41,7 @@
 		1E72FE6824B4BED20002F852 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E72FE6724B4BED20002F852 /* Constants.swift */; };
 		1E72FE6C24B4D3650002F852 /* SingleBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E72FE6A24B4D3650002F852 /* SingleBannerCell.swift */; };
 		1E72FE6D24B4D3650002F852 /* SingleBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E72FE6B24B4D3650002F852 /* SingleBannerCell.xib */; };
+		1E72FE9224B586650002F852 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E72FE9124B586650002F852 /* SplashViewController.swift */; };
 		3E06616B300F36CABC1135CF /* Pods_TrendyolInterviewProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55ABB676EE43576FFE15884 /* Pods_TrendyolInterviewProject.framework */; };
 		B4F4573459C01AFED7AB24F2 /* Pods_TrendyolInterviewProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30654A1B096AC26254F64BD /* Pods_TrendyolInterviewProjectUITests.framework */; };
 		B767D0DB8AEE4B1706ADF233 /* Pods_TrendyolInterviewProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8278838823CEB96A9CDCAE1E /* Pods_TrendyolInterviewProjectTests.framework */; };
@@ -59,6 +67,13 @@
 /* Begin PBXFileReference section */
 		02F324128FDFB51320C4348C /* Pods-TrendyolInterviewProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyolInterviewProject.release.xcconfig"; path = "Target Support Files/Pods-TrendyolInterviewProject/Pods-TrendyolInterviewProject.release.xcconfig"; sourceTree = "<group>"; };
 		142A426FF24CA5825410CDD0 /* Pods-TrendyolInterviewProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyolInterviewProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-TrendyolInterviewProjectUITests/Pods-TrendyolInterviewProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1E445B1324B5DEA600057E6F /* DetailWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailWireFrame.swift; sourceTree = "<group>"; };
+		1E445B1424B5DEA600057E6F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1E445B1524B5DEA600057E6F /* DetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		1E445B1624B5DEA600057E6F /* DetailProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailProtocols.swift; sourceTree = "<group>"; };
+		1E445B1724B5DEA600057E6F /* DetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		1E445B2024B5FBBB00057E6F /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		1E445B2224B5FBC300057E6F /* Header.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Header.xib; sourceTree = "<group>"; };
 		1E6CA19C24B311FB00EFAE3C /* TrendyolInterviewProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrendyolInterviewProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E6CA19F24B311FB00EFAE3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E6CA1A124B311FB00EFAE3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +107,7 @@
 		1E72FE6724B4BED20002F852 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1E72FE6A24B4D3650002F852 /* SingleBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleBannerCell.swift; sourceTree = "<group>"; };
 		1E72FE6B24B4D3650002F852 /* SingleBannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleBannerCell.xib; sourceTree = "<group>"; };
+		1E72FE9124B586650002F852 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		2B75F11944D5335CF8C50F29 /* Pods-TrendyolInterviewProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyolInterviewProjectTests.release.xcconfig"; path = "Target Support Files/Pods-TrendyolInterviewProjectTests/Pods-TrendyolInterviewProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		2BB4827DBAE948519EAD5314 /* Pods-TrendyolInterviewProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyolInterviewProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-TrendyolInterviewProjectTests/Pods-TrendyolInterviewProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A1799F6A3F4669A91E2DFFB /* Pods-TrendyolInterviewProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyolInterviewProject.debug.xcconfig"; path = "Target Support Files/Pods-TrendyolInterviewProject/Pods-TrendyolInterviewProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +168,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1E445B1224B5DD7800057E6F /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				1E72FE9124B586650002F852 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		1E445B1F24B5FB9900057E6F /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				1E445B2024B5FBBB00057E6F /* Header.swift */,
+				1E445B2224B5FBC300057E6F /* Header.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		1E6CA19324B311FB00EFAE3C = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +241,7 @@
 		1E6CA1CF24B312A200EFAE3C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1E445B1224B5DD7800057E6F /* Splash */,
 				1E6CA1F824B3C54500EFAE3C /* Loading */,
 				1E6CA1F624B3C3C300EFAE3C /* UIManager.swift */,
 				1E72FE6724B4BED20002F852 /* Constants.swift */,
@@ -230,6 +264,7 @@
 		1E6CA1D124B312C100EFAE3C /* List */ = {
 			isa = PBXGroup;
 			children = (
+				1E445B1F24B5FB9900057E6F /* Header */,
 				1E6CA1EA24B3156200EFAE3C /* Protocols */,
 				1E6CA1D324B312D300EFAE3C /* Cell */,
 				1E6CA1DC24B3132B00EFAE3C /* Entity */,
@@ -244,6 +279,11 @@
 		1E6CA1D224B312C600EFAE3C /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				1E445B1724B5DEA600057E6F /* DetailInteractor.swift */,
+				1E445B1524B5DEA600057E6F /* DetailPresenter.swift */,
+				1E445B1624B5DEA600057E6F /* DetailProtocols.swift */,
+				1E445B1424B5DEA600057E6F /* DetailViewController.swift */,
+				1E445B1324B5DEA600057E6F /* DetailWireFrame.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -429,6 +469,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E445B2324B5FBC300057E6F /* Header.xib in Resources */,
 				1E6CA1AC24B3120000EFAE3C /* LaunchScreen.storyboard in Resources */,
 				1E6CA1F024B315E900EFAE3C /* ProductSliderCell.xib in Resources */,
 				1E6CA1F424B3161900EFAE3C /* ProductSliderInternalCell.xib in Resources */,
@@ -547,15 +588,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E6CA1F324B3161900EFAE3C /* ProductSliderInternalCell.swift in Sources */,
+				1E445B1824B5DEA600057E6F /* DetailWireFrame.swift in Sources */,
 				1E6CA1E924B3149500EFAE3C /* ApiClient.swift in Sources */,
 				1E6CA1DB24B3132800EFAE3C /* ListInteractor.swift in Sources */,
 				1E6CA1E524B3146E00EFAE3C /* Endpoint.swift in Sources */,
 				1E6CA1EC24B3157300EFAE3C /* Protocols.swift in Sources */,
+				1E445B1924B5DEA600057E6F /* DetailViewController.swift in Sources */,
+				1E445B2124B5FBBB00057E6F /* Header.swift in Sources */,
+				1E72FE9224B586650002F852 /* SplashViewController.swift in Sources */,
 				1E6CA1FA24B3C55800EFAE3C /* LoadingView.swift in Sources */,
+				1E445B1B24B5DEA600057E6F /* DetailProtocols.swift in Sources */,
 				1E6CA1F724B3C3C400EFAE3C /* UIManager.swift in Sources */,
 				1E6CA1D924B3131300EFAE3C /* ListWireframe.swift in Sources */,
 				1E72FE6824B4BED20002F852 /* Constants.swift in Sources */,
 				1E6CA1A024B311FB00EFAE3C /* AppDelegate.swift in Sources */,
+				1E445B1A24B5DEA600057E6F /* DetailPresenter.swift in Sources */,
+				1E445B1C24B5DEA600057E6F /* DetailInteractor.swift in Sources */,
 				1E6CA1A224B311FB00EFAE3C /* SceneDelegate.swift in Sources */,
 				1E6CA1DE24B3133B00EFAE3C /* ListModel.swift in Sources */,
 				1E6CA1E724B3148300EFAE3C /* Result.swift in Sources */,

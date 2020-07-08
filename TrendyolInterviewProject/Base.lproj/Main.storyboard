@@ -10,13 +10,13 @@
         <!--Trendyol Project-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ListViewController" customModule="TrendyolInterviewProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ListViewController" customModule="TrendyolInterviewProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="skY-nU-TYn">
-                                <rect key="frame" x="0.0" y="108" width="414" height="734"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="778"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
@@ -32,11 +32,57 @@
                     <navigationItem key="navigationItem" title="Trendyol Project" id="BV1-WP-htV"/>
                     <connections>
                         <outlet property="tableView" destination="skY-nU-TYn" id="7et-mZ-gpI"/>
+                        <segue destination="gWc-tx-H81" kind="presentation" identifier="DetailSegue" modalPresentationStyle="fullScreen" id="d8J-26-KnJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="491" y="130"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="xp1-xu-O28">
+            <objects>
+                <viewController id="Kbe-bJ-5J4" customClass="SplashViewController" customModule="TrendyolInterviewProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gKT-Yt-gYI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trendyol" translatesAutoresizingMaskIntoConstraints="NO" id="4MQ-K0-QQD">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4MQ-K0-QQD" firstAttribute="leading" secondItem="kTT-88-PKe" secondAttribute="leading" id="Gfw-vT-rzn"/>
+                            <constraint firstItem="kTT-88-PKe" firstAttribute="trailing" secondItem="4MQ-K0-QQD" secondAttribute="trailing" id="VeS-od-bOO"/>
+                            <constraint firstItem="kTT-88-PKe" firstAttribute="bottom" secondItem="4MQ-K0-QQD" secondAttribute="bottom" id="lfo-UM-7aE"/>
+                            <constraint firstItem="4MQ-K0-QQD" firstAttribute="top" secondItem="kTT-88-PKe" secondAttribute="top" id="rVW-BV-oCv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kTT-88-PKe"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ndW-d7-Mga"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="ListSegue" id="f1m-Jw-kFC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lie-7g-GFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-445" y="130"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="EeY-bt-PzQ">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gWc-tx-H81" customClass="DetailViewController" customModule="TrendyolInterviewProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2aH-uO-sIY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="jZO-gS-eag"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ss0-JB-Oxd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1407" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tbK-km-3G8">
@@ -49,12 +95,15 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UDS-S7-b2r"/>
+                        <segue destination="Kbe-bJ-5J4" kind="relationship" relationship="rootViewController" id="7pR-gQ-QPS"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQs-ou-RQt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-465" y="130"/>
+            <point key="canvasLocation" x="-1330" y="130"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="trendyol" width="1200" height="627"/>
+    </resources>
 </document>
