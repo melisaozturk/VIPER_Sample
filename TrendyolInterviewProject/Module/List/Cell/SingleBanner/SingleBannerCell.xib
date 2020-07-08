@@ -20,10 +20,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="338" height="274"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mdv-lH-e3p">
-                                <rect key="frame" x="10" y="0.0" width="318" height="274"/>
+                                <rect key="frame" x="10" y="20" width="318" height="234"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7R-sL-7hx">
-                                <rect key="frame" x="10" y="233" width="318" height="21"/>
+                                <rect key="frame" x="10" y="223" width="318" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="PEU-BE-cKU"/>
                                 </constraints>
@@ -34,13 +34,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="mdv-lH-e3p" firstAttribute="top" secondItem="Hna-9z-ZC5" secondAttribute="top" id="3A6-af-bg4"/>
-                            <constraint firstAttribute="bottom" secondItem="Q7R-sL-7hx" secondAttribute="bottom" constant="20" id="CVw-WE-vm7"/>
+                            <constraint firstItem="mdv-lH-e3p" firstAttribute="top" secondItem="Hna-9z-ZC5" secondAttribute="top" constant="20" id="3A6-af-bg4"/>
+                            <constraint firstAttribute="bottom" secondItem="Q7R-sL-7hx" secondAttribute="bottom" constant="30" id="CVw-WE-vm7"/>
                             <constraint firstAttribute="trailing" secondItem="mdv-lH-e3p" secondAttribute="trailing" constant="10" id="Clz-aL-Zfi"/>
                             <constraint firstAttribute="trailing" secondItem="Q7R-sL-7hx" secondAttribute="trailing" constant="10" id="cIH-Ab-xRz"/>
                             <constraint firstItem="mdv-lH-e3p" firstAttribute="leading" secondItem="Hna-9z-ZC5" secondAttribute="leading" constant="10" id="mGh-TB-JIU"/>
                             <constraint firstItem="Q7R-sL-7hx" firstAttribute="leading" secondItem="Hna-9z-ZC5" secondAttribute="leading" constant="10" id="oE5-CI-iLw"/>
-                            <constraint firstAttribute="bottom" secondItem="mdv-lH-e3p" secondAttribute="bottom" id="wUQ-Sa-7YP"/>
+                            <constraint firstAttribute="bottom" secondItem="mdv-lH-e3p" secondAttribute="bottom" constant="20" id="wUQ-Sa-7YP"/>
                         </constraints>
                     </view>
                 </subviews>

@@ -33,14 +33,7 @@ class ListWireframe: PresenterToWireframeProtocol {
 
     func pushToDetailPage(navigationConroller navigationController: UINavigationController, data: Any?) {
         let detailModule = DetailWireframe.createDetailModule(data: data)
-//        navigationController.pushViewController(detailModule,animated: true)
-//        let nav = UINavigationController(rootViewController: DetailWireframe.createDetailModule())
         navigationController.pushViewController(detailModule,animated: true)
-//        present(detailModule, animated: true)        
-//        .pushViewController(detailModule,animated: true)
-//        present(nav, animated: true)
-        
-//        navigationController.visibleViewController?.performSegue(withIdentifier: "DetailSegue", sender: nil)
 
     }
 }

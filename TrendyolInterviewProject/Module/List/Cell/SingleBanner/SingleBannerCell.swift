@@ -48,6 +48,7 @@ class SingleBannerCell: UITableViewCell {
     }
     
     func setData() {
+        
         for content in self.contents {
             let url = URL(string: content.imageUrl!)
             imgProduct.kf.setImage(with: url)

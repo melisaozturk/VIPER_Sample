@@ -19,13 +19,15 @@ class ListViewController: UIViewController {
     var cellArray = ["SingleBannerCell", "ProductSliderCell"]
     let headerSingleBanner = Header()
     let headerProductSlider = Header()
-    
+    var singleBannerContents = [BannerContent]()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
         UIManager.shared().showLoading(view: self.view)
         presenter?.startFetchingData()
         self.tableRegister()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,6 +64,16 @@ class ListViewController: UIViewController {
         tableView.register(UINib(nibName: "ProductSliderCell", bundle: nil), forCellReuseIdentifier: "ProductSliderCell")
     }
     
+    private func getRowCount() {
+        if !self.widgets.isEmpty {
+            for widget in self.widgets {
+                if widget.displayType == "SINGLE" && widget.type == "BANNER" {
+                    headerSingleBanner.lblHeader.text = widget.title
+                    self.singleBannerContents.append(contentsOf: widget.bannerContents!)
+                }
+            }
+        }
+    }
 }
 
 
@@ -72,6 +84,7 @@ extension ListViewController:PresenterToViewProtocol{
         for item in listArray {
             self.widgets = item.widgets
         }
+        self.getRowCount()
         self.tableView.reloadData()
 
         UIManager.shared().removeLoading(view: self.view)
@@ -96,7 +109,14 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        switch section {
+        case 0:
+            return self.singleBannerContents.count
+        case 1:
+            return 1
+        default:
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -106,13 +126,19 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             cell = tableView.dequeueReusableCell(withIdentifier: "SingleBannerCell", for: indexPath) as! SingleBannerCell
-            if !self.widgets.isEmpty {
-                for widget in self.widgets {
-                    if widget.displayType == "SINGLE" && widget.type == "BANNER" {
-                        headerSingleBanner.lblHeader.text = widget.title
-                    }
-                }
+            if !self.singleBannerContents.isEmpty {
+                let url = URL(string: self.singleBannerContents[indexPath.row].imageUrl!)
+                (cell as! SingleBannerCell).imgProduct.kf.setImage(with: url)
+                (cell as! SingleBannerCell).lblTitle.text =  self.singleBannerContents[indexPath.row].navigation!.title
             }
+//            if !self.widgets.isEmpty {
+//                for widget in self.widgets {
+//                    if widget.displayType == "SINGLE" && widget.type == "BANNER" {
+//                        headerSingleBanner.lblHeader.text = widget.title
+//                        self.singleBannerContents = widget.bannerContents!
+//                    }
+//                }
+//            }
         case 1:
             cell = tableView.dequeueReusableCell(withIdentifier: "ProductSliderCell", for: indexPath) as! ProductSliderCell
             if !self.widgets.isEmpty {
@@ -134,12 +160,14 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        for data in self.widgets {
-            if let contents = data.bannerContents {
-                presenter?.showDetailController(navigationController: navigationController!, data: contents)
-                break
-            }
-        }
+        presenter?.showDetailController(navigationController: navigationController!, data: self.singleBannerContents)
+//
+//        for data in self.singleBannerWidgets {
+//                if let contents = data.bannerContents {
+//                    presenter?.showDetailController(navigationController: navigationController!, data: contents)
+//                    break
+//            }
+//        }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
