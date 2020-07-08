@@ -13,27 +13,39 @@ class ListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     weak var presenter: ViewToPresenterProtocol?
-//    var listArray: [String] = ["a"]
-    var listArray = [listResponse]()
     
-//    required init(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)!
-//    }
+    var listArray = [listResponse]()
+    var cellArray = ["ProductSliderCell", "SingleBannerCell"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-//        self.tableView.isHidden = true
-        self.tableView.backgroundView?.backgroundColor = .clear
-//        UIManager.shared().showLoading(view: self.view)
+
+        //        UIManager.shared().showLoading(view: self.view)
         presenter?.startFetchingData()
         self.tableRegister()
         self.navigationRegister()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(goDetail(_:)), name: Notification.Name("CellSelect"), object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    @objc func goDetail(_ notification: Notification) {
+             if let dict = notification.userInfo as NSDictionary? {
+                    if let data = dict["Select"] as? Bool {
+                        if data {
+                            presenter?.showDetailController(navigationController: navigationController!)
+                        }
+                        }
+                    }
+                }
+    
     private func navigationRegister() {
-//        self.navigationController?.navigationBar.topItem?.title = "Trendyol"
-//        self.navigationBar.topItem?.title = "Trendyol"
     }
     
     private func tableRegister() {
@@ -44,6 +56,7 @@ class ListViewController: UIViewController {
         self.tableView.separatorStyle = .none
 
         tableView.register(UINib(nibName: "ProductSliderCell", bundle: nil), forCellReuseIdentifier: "ProductSliderCell")
+        tableView.register(UINib(nibName: "SingleBannerCell", bundle: nil), forCellReuseIdentifier: "SingleBannerCell")
     }
        
 }
@@ -55,21 +68,22 @@ extension ListViewController:PresenterToViewProtocol{
 
         self.listArray = listArray
 //        UIManager.shared().removeLoading(view: self.view)
-            self.tableView.reloadData()
-        NotificationCenter.default.post(name: Notification.Name("listData"), object: nil, userInfo: ["listArray":listArray])//listArray.map({$0.widgets})]
-            
+//            self.tableView.reloadData()
+        NotificationCenter.default.post(name: Notification.Name("listData"), object: nil, userInfo: ["listArray":listArray])
+        
     }
     
     func showError() {
-//        DispatchQueue.main.async {
-//
-////        UIManager.shared().removeLoading(view: self.view)
-//        let alert = UIAlertController(title: "Alert", message: "Problem Fetching List", preferredStyle: UIAlertController.Style.alert)
-//        alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
-////        self.tableView.backgroundView?.backgroundColor = .clear
-////        self.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            
+            //        UIManager.shared().removeLoading(view: self.view)
+            let alert = UIAlertController(title: "Alert", message: "Problem Fetching List", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertAction.Style.default, handler: nil))
+            //        self.tableView.backgroundView?.backgroundColor = .clear
+            //        self.present(alert, animated: true, completion: nil)
 //            self.parent?.addChild(alert)
-//        }
+            self.navigationController?.pushViewController(alert, animated: true)
+        }
     }
     
     
@@ -78,14 +92,19 @@ extension ListViewController:PresenterToViewProtocol{
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return cellArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProductSliderCell", for: indexPath) as! ProductSliderCell
-//        cell.collectionView.reloadData()
-                
-        return cell
+        
+        var cell: UITableViewCell?
+        
+        if cellArray[indexPath.row] == "ProductSliderCell" {
+            cell = tableView.dequeueReusableCell(withIdentifier: "ProductSliderCell", for: indexPath) as! ProductSliderCell
+        } else if cellArray[indexPath.row] == "SingleBannerCell" {
+            cell = tableView.dequeueReusableCell(withIdentifier: "SingleBannerCell", for: indexPath) as! SingleBannerCell
+        }
+        return cell == nil ? UITableViewCell() : cell!
     }
     
 //    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -98,9 +117,5 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
           return 200
       }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            presenter?.showDetailController(navigationController: navigationController!)
-    }
 }
 

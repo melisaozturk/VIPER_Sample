@@ -13,9 +13,7 @@ class ProductSliderCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-//    var listArray = [listResponse]()
-//    var listArray:Array<albumResponse> = Array()
-    var widgets = [Widget]()
+    var products = [Product]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,28 +22,28 @@ class ProductSliderCell: UITableViewCell {
         NotificationCenter.default.addObserver(self, selector: #selector(getData(_:)), name: NSNotification.Name(rawValue: "listData"), object: nil)
     }
 
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
     }
     
-    @objc func getData(_ notifiation: Notification) {
-        if let dict = notifiation.userInfo as NSDictionary? {
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    
+    @objc func getData(_ notification: Notification) {
+        if let dict = notification.userInfo as NSDictionary? {
             if let data = dict["listArray"] as? [listResponse] {
                 for item in data {
                     for data in item.widgets {
-                        if data.displayType == "SINGLE" && data.type == "BANNER" {
-                            self.widgets.append(data)
+                        if data.displayType == "SLIDER" && data.type == "PRODUCT" {
+                            if data.products != nil {
+                                self.products = data.products!
+                            }
                         }
                     }
-                
-//                self.widgets = data.map({$0.widgets[0]})//.filter({($0.displayType?.contains("CAROUSEL"))!})
-                    
-//                    .map({$0.widgets[0]}).filter {term in
-//                    return  (term.type?.contains("BANNER"))! && (term.displayType?.contains("CAROUSEL"))!
                 }
                 self.collectionView.reloadData()
             }
@@ -63,26 +61,22 @@ class ProductSliderCell: UITableViewCell {
 extension ProductSliderCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return widgets.count
+        return products.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductSliderInternalCell", for: indexPath) as! ProductSliderInternalCell
-//        let cellType = listArray![indexPath.row].widgets.map({ (displayType) in
-//            displayType.displayType
-//        })
-        
-        let contents = self.widgets[indexPath.row].bannerContents
-        
-        let url = URL(string: contents![0].imageUrl!)
+                
+        let url = URL(string: self.products[indexPath.row].imageUrl!)
         cell.imgContent.kf.setImage(with: url)
-        cell.lblTitle.text = contents![0].navigation!.title
-        cell.contentView.layer.borderWidth = 1.0
-        cell.contentView.layer.borderColor = UIColor.black.cgColor
-//        cell.isUserInteractionEnabled = true
+        cell.lblTitle.text = self.products[indexPath.row].name!
         
         return cell
-    }        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "CellSelect"), object: nil, userInfo: ["Select":true])
+    }
 }
 
 extension ProductSliderCell: UICollectionViewDelegateFlowLayout {

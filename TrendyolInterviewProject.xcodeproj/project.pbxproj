@@ -32,6 +32,8 @@
 		1E6CA1FA24B3C55800EFAE3C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6CA1F924B3C55800EFAE3C /* LoadingView.swift */; };
 		1E6CA1FC24B3C56100EFAE3C /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E6CA1FB24B3C56100EFAE3C /* LoadingView.xib */; };
 		1E72FE6824B4BED20002F852 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E72FE6724B4BED20002F852 /* Constants.swift */; };
+		1E72FE6C24B4D3650002F852 /* SingleBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E72FE6A24B4D3650002F852 /* SingleBannerCell.swift */; };
+		1E72FE6D24B4D3650002F852 /* SingleBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E72FE6B24B4D3650002F852 /* SingleBannerCell.xib */; };
 		3E06616B300F36CABC1135CF /* Pods_TrendyolInterviewProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55ABB676EE43576FFE15884 /* Pods_TrendyolInterviewProject.framework */; };
 		B4F4573459C01AFED7AB24F2 /* Pods_TrendyolInterviewProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30654A1B096AC26254F64BD /* Pods_TrendyolInterviewProjectUITests.framework */; };
 		B767D0DB8AEE4B1706ADF233 /* Pods_TrendyolInterviewProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8278838823CEB96A9CDCAE1E /* Pods_TrendyolInterviewProjectTests.framework */; };
@@ -88,6 +90,8 @@
 		1E6CA1F924B3C55800EFAE3C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		1E6CA1FB24B3C56100EFAE3C /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		1E72FE6724B4BED20002F852 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1E72FE6A24B4D3650002F852 /* SingleBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleBannerCell.swift; sourceTree = "<group>"; };
+		1E72FE6B24B4D3650002F852 /* SingleBannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleBannerCell.xib; sourceTree = "<group>"; };
 		2B75F11944D5335CF8C50F29 /* Pods-TrendyolInterviewProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyolInterviewProjectTests.release.xcconfig"; path = "Target Support Files/Pods-TrendyolInterviewProjectTests/Pods-TrendyolInterviewProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		2BB4827DBAE948519EAD5314 /* Pods-TrendyolInterviewProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyolInterviewProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-TrendyolInterviewProjectTests/Pods-TrendyolInterviewProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A1799F6A3F4669A91E2DFFB /* Pods-TrendyolInterviewProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrendyolInterviewProject.debug.xcconfig"; path = "Target Support Files/Pods-TrendyolInterviewProject/Pods-TrendyolInterviewProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				1E6CA1F524B3AE9600EFAE3C /* ProductSlider */,
+				1E72FE6924B4D33B0002F852 /* SingleBanner */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -305,6 +310,15 @@
 				1E6CA1FB24B3C56100EFAE3C /* LoadingView.xib */,
 			);
 			path = Loading;
+			sourceTree = "<group>";
+		};
+		1E72FE6924B4D33B0002F852 /* SingleBanner */ = {
+			isa = PBXGroup;
+			children = (
+				1E72FE6A24B4D3650002F852 /* SingleBannerCell.swift */,
+				1E72FE6B24B4D3650002F852 /* SingleBannerCell.xib */,
+			);
+			path = SingleBanner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +435,7 @@
 				1E6CA1FC24B3C56100EFAE3C /* LoadingView.xib in Resources */,
 				1E6CA1A924B3120000EFAE3C /* Assets.xcassets in Resources */,
 				1E6CA1A724B311FB00EFAE3C /* Main.storyboard in Resources */,
+				1E72FE6D24B4D3650002F852 /* SingleBannerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +563,7 @@
 				1E6CA1E024B3138600EFAE3C /* Endpoints.swift in Sources */,
 				1E6CA1D524B312F900EFAE3C /* ListViewController.swift in Sources */,
 				1E6CA1EF24B315E900EFAE3C /* ProductSliderCell.swift in Sources */,
+				1E72FE6C24B4D3650002F852 /* SingleBannerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
