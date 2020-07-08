@@ -35,13 +35,11 @@ class ProductSliderCell: UITableViewCell {
     
     @objc func getData(_ notification: Notification) {
         if let dict = notification.userInfo as NSDictionary? {
-            if let data = dict["listArray"] as? [listResponse] {
+            if let data = dict["listArray"] as? [Widget] {
                 for item in data {
-                    for data in item.widgets {
-                        if data.displayType == "SLIDER" && data.type == "PRODUCT" {
-                            if data.products != nil {
-                                self.products = data.products!
-                            }
+                        if item.displayType == "SLIDER" && item.type == "PRODUCT" {
+                            if item.products != nil {
+                                self.products = item.products!
                         }
                     }
                 }

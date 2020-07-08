@@ -12,7 +12,7 @@ class DetailViewController: UIViewController {
 
     weak var presenter: DetailViewToPresenterProtocol?
     
-    var products: [Product]?
+    var contents: [BannerContent]?
     
     override func viewDidLoad() {
         super.viewDidLoad()

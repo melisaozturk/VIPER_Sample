@@ -10,21 +10,21 @@ import UIKit
 import Kingfisher
 
 class SingleBannerCell: UITableViewCell {
-
+    
     @IBOutlet weak var imgProduct: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!
     
     var contents = [BannerContent]()    
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         NotificationCenter.default.addObserver(self, selector: #selector(getData(_:)), name: NSNotification.Name(rawValue: "listData"), object: nil)
-
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }        
     
@@ -32,22 +32,20 @@ class SingleBannerCell: UITableViewCell {
         NotificationCenter.default.removeObserver(self)
     }
     
-        @objc func getData(_ notification: Notification) {
-            if let dict = notification.userInfo as NSDictionary? {
-                if let data = dict["listArray"] as? [listResponse] {
-                    for item in data {
-                        for data in item.widgets {
-                            if data.displayType == "SINGLE" && data.type == "BANNER" {
-                                if data.bannerContents != nil {
-                                    self.contents = data.bannerContents!
-                                    self.setData()
-                                }
-                            }
+    @objc func getData(_ notification: Notification) {
+        if let dict = notification.userInfo as NSDictionary? {
+            if let data = dict["listArray"] as? [Widget] {
+                for item in data {
+                    if item.displayType == "SINGLE" && item.type == "BANNER" {
+                        if item.bannerContents != nil {
+                            self.contents = item.bannerContents!
+                            self.setData()
                         }
                     }
                 }
             }
         }
+    }
     
     func setData() {
         for content in self.contents {

@@ -14,7 +14,7 @@ class DetailWireframe: DetailPresenterToWireframeProtocol {
         return UIStoryboard(name: "Main", bundle: Bundle.main)
     }
     
-    static func createDetailModule(data: Any) -> DetailViewController {
+    static func createDetailModule(data: Any?) -> DetailViewController {
         let detailVC = mainStoryboard.instantiateViewController(identifier: "DetailViewController") as! DetailViewController
         
         let interactor: DetailPresenterToInteractorProtocol = DetailInteractor()
@@ -26,7 +26,10 @@ class DetailWireframe: DetailPresenterToWireframeProtocol {
         presenter.view = detailVC
         presenter.interactor = interactor
         interactor.presenter = presenter
-        detailVC.products = data as! [Product]
+        
+        if let contentData = data {
+            detailVC.contents = contentData as? [BannerContent]
+        }
         
         return detailVC
     }

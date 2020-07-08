@@ -31,7 +31,7 @@ class ListWireframe: PresenterToWireframeProtocol {
         return listVC
     }
 
-    func pushToDetailPage(navigationConroller navigationController: UINavigationController, data: Any) {
+    func pushToDetailPage(navigationConroller navigationController: UINavigationController, data: Any?) {
         let detailModule = DetailWireframe.createDetailModule(data: data)
 //        navigationController.pushViewController(detailModule,animated: true)
 //        let nav = UINavigationController(rootViewController: DetailWireframe.createDetailModule())

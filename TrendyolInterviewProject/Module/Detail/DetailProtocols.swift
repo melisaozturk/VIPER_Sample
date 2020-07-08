@@ -25,7 +25,7 @@ protocol DetailPresenterToViewProtocol: class{
 }
 
 protocol DetailPresenterToWireframeProtocol: class {
-    static func createDetailModule(data: Any) -> DetailViewController
+    static func createDetailModule(data: Any?) -> DetailViewController
     func back(navigationConroller:UINavigationController)
 }
 

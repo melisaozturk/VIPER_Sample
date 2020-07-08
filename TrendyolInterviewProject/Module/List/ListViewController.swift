@@ -14,7 +14,8 @@ class ListViewController: UIViewController {
     
     weak var presenter: ViewToPresenterProtocol?
     
-    var listArray = [listResponse]()
+//    var listArray = [listResponse]()
+    var widgets = [Widget]()
     var cellArray = ["SingleBannerCell", "ProductSliderCell"]
     let headerSingleBanner = Header()
     let headerProductSlider = Header()
@@ -42,7 +43,7 @@ class ListViewController: UIViewController {
         if let dict = notification.userInfo as NSDictionary? {
             if let data = dict["Select"] as? Bool {
                 if data {
-                    presenter?.showDetailController(navigationController: navigationController!, data: listArray)
+                    presenter?.showDetailController(navigationController: navigationController!, data: widgets)
                     
                 }
             }
@@ -68,10 +69,13 @@ extension ListViewController:PresenterToViewProtocol{
     
     func showList(listArray: [listResponse]) {
         
-        self.listArray = listArray
+        for item in listArray {
+            self.widgets = item.widgets
+        }
+        self.tableView.reloadData()
+
         UIManager.shared().removeLoading(view: self.view)
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "listData"), object: nil, userInfo: ["listArray":listArray])
-        
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "listData"), object: nil, userInfo: ["listArray":widgets])
     }
     
     func showError() {
@@ -99,15 +103,25 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         
         var cell: UITableViewCell?
         
-        
         switch indexPath.section {
         case 0:
             cell = tableView.dequeueReusableCell(withIdentifier: "SingleBannerCell", for: indexPath) as! SingleBannerCell
-            headerSingleBanner.lblHeader.text = "Single Banner"
-
+            if !self.widgets.isEmpty {
+                for widget in self.widgets {
+                    if widget.displayType == "SINGLE" && widget.type == "BANNER" {
+                        headerSingleBanner.lblHeader.text = widget.title
+                    }
+                }
+            }
         case 1:
             cell = tableView.dequeueReusableCell(withIdentifier: "ProductSliderCell", for: indexPath) as! ProductSliderCell
-            headerProductSlider.lblHeader.text = "Product Slider"
+            if !self.widgets.isEmpty {
+                for widget in self.widgets {
+                    if widget.displayType == "SLIDER" && widget.type == "PRODUCT" {
+                        headerProductSlider.lblHeader.text = widget.title
+                    }
+                }
+            }
         default:
             cell = UITableViewCell()
         }
@@ -120,13 +134,12 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        for item in listArray {
-        //            for data in item.widgets {
-        //                guard let products = data.products else { return  }
-        presenter?.showDetailController(navigationController: navigationController!, data: listArray)
-        //            }
-        //        }
-        //        presenter?.showDetailController(navigationController: navigationController!, data: listArray)
+        for data in self.widgets {
+            if let contents = data.bannerContents {
+                presenter?.showDetailController(navigationController: navigationController!, data: contents)
+                break
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
