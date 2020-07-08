@@ -13,7 +13,12 @@ class SplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        let list = ListWireframe.createListModule()
+
+        /* Initiating instance of ui-navigation-controller with view-controller */
+        navigationController!.viewControllers = [list]
+
     }
     
 
