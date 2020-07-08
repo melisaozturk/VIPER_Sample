@@ -12,6 +12,9 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var lblBrand: UILabel!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblPrice: UILabel!
     
     weak var presenter: DetailViewToPresenterProtocol?
     
@@ -45,8 +48,12 @@ class DetailViewController: UIViewController {
                 scrollView.delegate = self
             }
         }
+        if let brand = product?.brandName, let name = product?.name, let price = product?.marketPrice {
+            lblBrand.text = brand
+            lblName.text = name
+            lblPrice.text = "\(String(price)) TL"
+        }
     }
-    
     
 }
     
