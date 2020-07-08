@@ -14,13 +14,12 @@ class ListViewController: UIViewController {
     
     weak var presenter: ViewToPresenterProtocol?
     
-//    var listArray = [listResponse]()
     var widgets = [Widget]()
     var cellArray = ["SingleBannerCell", "ProductSliderCell"]
-    let headerSingleBanner = Header()
-    let headerProductSlider = Header()
     var singleBannerContents = [BannerContent]()
-        
+    var productSliderContents = [Product]()
+    var titles = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,7 +44,7 @@ class ListViewController: UIViewController {
         if let dict = notification.userInfo as NSDictionary? {
             if let data = dict["Select"] as? Bool {
                 if data {
-                    presenter?.showDetailController(navigationController: navigationController!, data: widgets)
+                    presenter?.showDetailController(navigationController: navigationController!, data: productSliderContents)
                     
                 }
             }
@@ -68,10 +67,19 @@ class ListViewController: UIViewController {
         if !self.widgets.isEmpty {
             for widget in self.widgets {
                 if widget.displayType == "SINGLE" && widget.type == "BANNER" {
-                    headerSingleBanner.lblHeader.text = widget.title
-                    self.singleBannerContents.append(contentsOf: widget.bannerContents!)
+                    self.titles.append(widget.title!)
+                    if let bannerContent = widget.bannerContents {
+                        self.singleBannerContents.append(contentsOf: bannerContent)
+                    }
+                }
+                
+                if widget.displayType == "SLIDER" && widget.type == "PRODUCT" {
+                    if let products = widget.products {
+                        self.productSliderContents.append(contentsOf: products)
+                    }
                 }
             }
+            
         }
     }
 }
@@ -130,23 +138,13 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
                 let url = URL(string: self.singleBannerContents[indexPath.row].imageUrl!)
                 (cell as! SingleBannerCell).imgProduct.kf.setImage(with: url)
                 (cell as! SingleBannerCell).lblTitle.text =  self.singleBannerContents[indexPath.row].navigation!.title
+                (cell as! SingleBannerCell).lblHeader.text = self.titles[indexPath.row]
             }
-//            if !self.widgets.isEmpty {
-//                for widget in self.widgets {
-//                    if widget.displayType == "SINGLE" && widget.type == "BANNER" {
-//                        headerSingleBanner.lblHeader.text = widget.title
-//                        self.singleBannerContents = widget.bannerContents!
-//                    }
-//                }
-//            }
         case 1:
             cell = tableView.dequeueReusableCell(withIdentifier: "ProductSliderCell", for: indexPath) as! ProductSliderCell
-            if !self.widgets.isEmpty {
-                for widget in self.widgets {
-                    if widget.displayType == "SLIDER" && widget.type == "PRODUCT" {
-                        headerProductSlider.lblHeader.text = widget.title
-                    }
-                }
+            if !self.productSliderContents.isEmpty {
+                (cell as! ProductSliderCell).products = self.productSliderContents
+                (cell as! ProductSliderCell).collectionView.reloadData()
             }
         default:
             cell = UITableViewCell()
@@ -170,20 +168,5 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 //        }
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        switch section {
-        case 0:
-            return headerSingleBanner
-        case 1:
-            return headerProductSlider
-        default:
-            return UIView()
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
-    }
 }
 

@@ -19,7 +19,7 @@ class ProductSliderCell: UITableViewCell {
         super.awakeFromNib()
         
        collectionRegister()
-        NotificationCenter.default.addObserver(self, selector: #selector(getData(_:)), name: NSNotification.Name(rawValue: "listData"), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(getData(_:)), name: NSNotification.Name(rawValue: "listData"), object: nil)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,25 +28,25 @@ class ProductSliderCell: UITableViewCell {
     }
     
     
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
+//    deinit {
+//        NotificationCenter.default.removeObserver(self)
+//    }
+//
     
-    
-    @objc func getData(_ notification: Notification) {
-        if let dict = notification.userInfo as NSDictionary? {
-            if let data = dict["listArray"] as? [Widget] {
-                for item in data {
-                        if item.displayType == "SLIDER" && item.type == "PRODUCT" {
-                            if item.products != nil {
-                                self.products = item.products!
-                        }
-                    }
-                }
-                self.collectionView.reloadData()
-            }
-        }
-    }
+//    @objc func getData(_ notification: Notification) {
+//        if let dict = notification.userInfo as NSDictionary? {
+//            if let data = dict["listArray"] as? [Widget] {
+//                for item in data {
+//                        if item.displayType == "SLIDER" && item.type == "PRODUCT" {
+//                            if item.products != nil {
+//                                self.products = item.products!
+//                        }
+//                    }
+//                }
+//                self.collectionView.reloadData()
+//            }
+//        }
+//    }
     
     private func collectionRegister() {
         self.collectionView.delegate = self
@@ -68,7 +68,6 @@ extension ProductSliderCell: UICollectionViewDelegate, UICollectionViewDataSourc
         let url = URL(string: self.products[indexPath.row].imageUrl!)
         cell.imgContent.kf.setImage(with: url)
         cell.lblTitle.text = self.products[indexPath.row].name!
-
         
         return cell
     }
