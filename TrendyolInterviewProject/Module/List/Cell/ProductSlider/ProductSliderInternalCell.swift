@@ -15,7 +15,7 @@ class ProductSliderInternalCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        lblTitle.adjustsFontSizeToFitWidth = true
     }
 
 }

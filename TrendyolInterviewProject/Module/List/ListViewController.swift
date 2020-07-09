@@ -157,12 +157,12 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         return cell!
     }
     
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
             return 200
         case 1:
-            
             if !singleBannerContents.isEmpty {
                 if let contentHeight = singleBannerContents[indexPath.row].height {
                     return CGFloat(contentHeight)

@@ -55,7 +55,6 @@ class DetailViewController: UIViewController {
             lblPrice.text = "\(String(price)) TL"
         }
     }
-    
 }
     
 extension DetailViewController: DetailPresenterToViewProtocol{
