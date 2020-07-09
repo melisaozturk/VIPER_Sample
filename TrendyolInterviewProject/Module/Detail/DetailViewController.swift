@@ -40,6 +40,7 @@ class DetailViewController: UIViewController {
                     let url = URL(string: self.urls![index])
                     let imageView = UIImageView(frame: frame)
                     imageView.kf.setImage(with: url)
+                    imageView.contentMode = .scaleAspectFit
                     self.scrollView.addSubview(imageView)
                     
                 }

@@ -30,4 +30,27 @@ class TrendyolInterviewProjectTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testGetListService() {
+        
+        let exp = expectation(description: "Check list call is")
+        let result = XCTWaiter.wait(for: [exp], timeout: 3)
+        
+        if result == XCTWaiter.Result.timedOut {
+            let service = ListInteractor()
+            service.getFeed(from: .widget, completion: { response in
+                switch response {
+                case .success(_):
+                    XCTAssertTrue(true, "assert is true")
+                    sleep(5)
+                    exp.fulfill()
+                case .failure( _):
+                    XCTAssertFalse(false, "assert is false")
+                }
+            })
+        } else {
+            XCTFail("Delay interrupted")
+        }
+    }
+    
 }
