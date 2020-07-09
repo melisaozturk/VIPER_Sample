@@ -46,8 +46,22 @@ class DetailViewController: UIViewController {
                     self.scrollView.addSubview(imageView)
                     
                 }
+                
+                if urls.count == 0 {
+                    frame.origin.x = 0
+                    frame.size = scrollView.frame.size
+                    frame.origin.y = (self.navigationController?.navigationBar.frame.height)!
+                    
+                    let imageView = UIImageView(frame: frame)
+                    imageView.image = UIImage(named: "trendyol")
+                    imageView.contentMode = .scaleAspectFill
+                    self.scrollView.addSubview(imageView)
+                    scrollView.contentSize = CGSize(width: (scrollView.frame.size.width ), height: scrollView.frame.size.height)
+                }
+                else {
+                    scrollView.contentSize = CGSize(width: (scrollView.frame.size.width * CGFloat(self.urls!.count)), height: scrollView.frame.size.height)
+                }
                 contentHeight.constant = scrollView.frame.size.height + (self.navigationController?.navigationBar.frame.height)!
-                scrollView.contentSize = CGSize(width: (scrollView.frame.size.width * CGFloat(self.urls!.count)), height: scrollView.frame.size.height)
                 scrollView.delegate = self
             }
             
