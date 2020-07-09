@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var lblBrand: UILabel!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblPrice: UILabel!
+    @IBOutlet weak var contentHeight: NSLayoutConstraint!
     
     weak var presenter: DetailViewToPresenterProtocol?
     
@@ -36,8 +37,17 @@ class DetailViewController: UIViewController {
                 for index in 0..<self.urls!.count {
                     frame.origin.x = scrollView.frame.size.width * CGFloat(index)
                     frame.size = scrollView.frame.size
+                    frame.origin.y = 40
                     
                     let url = URL(string: self.urls![index])
+                    
+                    if let imageSource = CGImageSourceCreateWithURL(url! as CFURL, nil) {
+                        if let imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, nil) as Dictionary? {
+                             let pixelHeight = imageProperties[kCGImagePropertyPixelHeight] as! Int
+                            contentHeight.constant = scrollView.frame.size.height + 40//CGFloat(pixelHeight)
+                          }
+                      }
+                    
                     let imageView = UIImageView(frame: frame)
                     imageView.kf.setImage(with: url)
                     imageView.contentMode = .scaleAspectFill

@@ -242,6 +242,7 @@
                     </view>
                     <size key="freeformSize" width="414" height="2000"/>
                     <connections>
+                        <outlet property="contentHeight" destination="tGF-MP-aIc" id="rI5-ms-p6N"/>
                         <outlet property="lblBrand" destination="OQb-FZ-skP" id="cK1-HA-DrH"/>
                         <outlet property="lblName" destination="YHu-Zp-Fe1" id="Fp5-CT-nCj"/>
                         <outlet property="lblPrice" destination="SAx-wp-pVG" id="brx-fL-H8o"/>
