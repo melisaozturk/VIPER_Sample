@@ -30,5 +30,43 @@ class TrendyolInterviewProjectTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
+    func testGetMoviesWithExpectedURLHostAndPath() {
+       let listInteractor = ListInteractor()
+        ListInteractor.getFeed(<#T##self: ListInteractor##ListInteractor#>)
+        
+    }
+    func test_Authentication_Positive() {
+        
+        // given
+//        let authenticationExpectation = expectation(description: "Authentication")
+//        var authentication = Authentication()
+//        let params: [String: AnyObject] = [
+//            "userName": "user@abc.com" as AnyObject,
+//            "password": "User12345" as AnyObject ]
+        
+        // when
+        
+//        ListInteractor.getFeed(from: .widget, completion: { response in
+//                  switch response {
+//                  case .success(let successResponse):
+//                      guard let results = successResponse.self else {return}
+//                  case .failure( _):
+//                      print("List Fetch Failed")
+//                  }
+//              })
+        
+//        Authentication.auth(params: params, success: { (result) in
+//            authentication = result
+//            authenticationExpectation.fulfill()
+//        }, failure: { (error) in
+//            print(error)
+//        })
+//
+//        // then
+//        waitForExpectations(timeout: 2) { _ in
+//            XCTAssertNotNil(authentication)
+//            XCTAssertEqual(authentication.name, "Alaattin Bedir")
+//        }
+        
+    }
 }

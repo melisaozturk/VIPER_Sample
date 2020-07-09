@@ -40,7 +40,7 @@ class ListInteractor: ApiClient, PresenterToInteractorProtocol {
         })
     }
     
-    private func getFeed(from endpointType: Endpoints, completion: @escaping (Result<listResponse?, APIError>) -> Void) {
+    func getFeed(from endpointType: Endpoints, completion: @escaping (Result<listResponse?, APIError>) -> Void) {
         
         let endpoint = endpointType
         let request = endpoint.request

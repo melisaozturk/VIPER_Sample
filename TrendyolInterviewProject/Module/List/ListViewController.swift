@@ -133,7 +133,6 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.section {
         case 0:
-            
             cell = tableView.dequeueReusableCell(withIdentifier: "ProductSliderCell", for: indexPath) as! ProductSliderCell
             if !self.productSliderWidget.isEmpty {
                 if let products = self.productSliderWidget[indexPath.row].products {

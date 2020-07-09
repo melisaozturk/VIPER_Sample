@@ -30,7 +30,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="cR2-bu-ks3"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
