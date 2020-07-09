@@ -15,7 +15,6 @@ protocol DetailViewToPresenterProtocol: class{
     var view: DetailPresenterToViewProtocol? {get set}
     var interactor: DetailPresenterToInteractorProtocol? {get set}
     var wireframe: DetailPresenterToWireframeProtocol? {get set}
-    func back(navigationConroller:UINavigationController)
 }
 
 protocol DetailPresenterToViewProtocol: class{
@@ -23,7 +22,6 @@ protocol DetailPresenterToViewProtocol: class{
 
 protocol DetailPresenterToWireframeProtocol: class {
     static func createDetailModule(data: Any?) -> DetailViewController
-    func back(navigationConroller:UINavigationController)
 }
 
 protocol DetailPresenterToInteractorProtocol: class {

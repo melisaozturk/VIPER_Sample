@@ -16,10 +16,6 @@ class DetailPresenter: DetailViewToPresenterProtocol {
     var interactor: DetailPresenterToInteractorProtocol?
     var wireframe: DetailPresenterToWireframeProtocol?
     
-    
-    func back(navigationConroller: UINavigationController) {
-        wireframe?.back(navigationConroller: navigationConroller)
-    }
 }
 
 extension DetailPresenter: DetailInteractorToPresenterProtocol {

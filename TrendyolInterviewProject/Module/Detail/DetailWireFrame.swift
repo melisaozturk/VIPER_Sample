@@ -32,10 +32,6 @@ class DetailWireframe: DetailPresenterToWireframeProtocol {
         }
         
         return detailVC
-    }
-    
-    func back(navigationConroller:UINavigationController) {
-        navigationConroller.popViewController(animated: true)
-       }
+    }    
 }
 
