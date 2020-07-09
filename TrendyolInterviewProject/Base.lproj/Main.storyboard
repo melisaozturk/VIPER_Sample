@@ -97,12 +97,6 @@
                                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B2C-fe-amA">
                                                                 <rect key="frame" x="0.0" y="0.0" width="413" height="499"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                <subviews>
-                                                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="VwK-rR-O4D">
-                                                                        <rect key="frame" x="0.0" y="462" width="414" height="37"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    </pageControl>
-                                                                </subviews>
                                                             </scrollView>
                                                         </subviews>
                                                         <constraints>
@@ -142,16 +136,26 @@
                                                             <constraint firstAttribute="height" constant="100" id="w3z-Pr-BVZ"/>
                                                         </constraints>
                                                     </view>
+                                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="VwK-rR-O4D">
+                                                        <rect key="frame" x="0.0" y="460" width="414" height="40"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="iev-L5-iKg"/>
+                                                        </constraints>
+                                                    </pageControl>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstItem="bPy-lb-Chw" firstAttribute="trailing" secondItem="cbB-Ya-dPW" secondAttribute="trailing" id="CmQ-qV-DJt"/>
+                                                    <constraint firstItem="VwK-rR-O4D" firstAttribute="leading" secondItem="9gy-YZ-a0j" secondAttribute="leading" id="EdZ-if-oQE"/>
                                                     <constraint firstAttribute="trailing" secondItem="cbB-Ya-dPW" secondAttribute="trailing" id="IIO-u8-4IY"/>
                                                     <constraint firstItem="bPy-lb-Chw" firstAttribute="top" secondItem="9gy-YZ-a0j" secondAttribute="top" id="MGJ-pJ-crh"/>
                                                     <constraint firstAttribute="height" constant="2748" id="ckX-He-9SY"/>
                                                     <constraint firstItem="cbB-Ya-dPW" firstAttribute="leading" secondItem="9gy-YZ-a0j" secondAttribute="leading" id="iHf-g5-8NL"/>
                                                     <constraint firstItem="bPy-lb-Chw" firstAttribute="leading" secondItem="cbB-Ya-dPW" secondAttribute="leading" id="iwF-YX-cqR"/>
-                                                    <constraint firstItem="cbB-Ya-dPW" firstAttribute="top" secondItem="bPy-lb-Chw" secondAttribute="bottom" constant="10" id="lYh-m8-uJY"/>
+                                                    <constraint firstItem="VwK-rR-O4D" firstAttribute="top" secondItem="bPy-lb-Chw" secondAttribute="bottom" constant="-40" id="izW-uc-ZOv"/>
+                                                    <constraint firstItem="cbB-Ya-dPW" firstAttribute="top" secondItem="VwK-rR-O4D" secondAttribute="bottom" constant="10" id="n7a-Zd-dMh"/>
+                                                    <constraint firstAttribute="trailing" secondItem="VwK-rR-O4D" secondAttribute="trailing" id="pfz-q1-4i8"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
