@@ -24,7 +24,6 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.backBarButtonItem?.title = ""
         setData()
     }
     
@@ -54,6 +53,17 @@ class DetailViewController: UIViewController {
             lblName.text = name
             lblPrice.text = "\(String(price)) TL"
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationSetup()
+    }
+    
+    private func navigationSetup() {
+        self.title = "Product Detail"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem =  UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem?.tintColor = .black
     }
 }
     
