@@ -48,7 +48,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trendyol" translatesAutoresizingMaskIntoConstraints="NO" id="4MQ-K0-QQD">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -61,6 +61,7 @@
                         <viewLayoutGuide key="safeArea" id="kTT-88-PKe"/>
                     </view>
                     <navigationItem key="navigationItem" id="ndW-d7-Mga"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="ListSegue" id="f1m-Jw-kFC"/>
                     </connections>
@@ -86,12 +87,6 @@
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AOX-6U-rlQ">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSy-2x-sfa">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
                                         <viewLayoutGuide key="contentLayoutGuide" id="RzK-1j-EgG"/>
                                         <viewLayoutGuide key="frameLayoutGuide" id="J0L-c1-w7t"/>
                                     </scrollView>
@@ -103,7 +98,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTL-qZ-9OD">
-                                <rect key="frame" x="20" y="512" width="374" height="25"/>
+                                <rect key="frame" x="20" y="552" width="374" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="WtK-0b-PSe"/>
                                 </constraints>
@@ -112,7 +107,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ctk-zc-3Go">
-                                <rect key="frame" x="20" y="547" width="374" height="25"/>
+                                <rect key="frame" x="20" y="577" width="374" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="KGP-FJ-nkf"/>
                                 </constraints>
@@ -177,10 +172,10 @@
                             <constraint firstItem="ViD-af-fpS" firstAttribute="top" secondItem="jZO-gS-eag" secondAttribute="top" id="YeF-2M-ITj"/>
                             <constraint firstItem="jZO-gS-eag" firstAttribute="trailing" secondItem="Ctk-zc-3Go" secondAttribute="trailing" constant="20" id="bkS-VJ-gke"/>
                             <constraint firstItem="Ctk-zc-3Go" firstAttribute="leading" secondItem="2aH-uO-sIY" secondAttribute="leading" constant="20" id="knl-Ng-zC0"/>
-                            <constraint firstItem="Ctk-zc-3Go" firstAttribute="top" secondItem="YTL-qZ-9OD" secondAttribute="bottom" constant="10" id="smi-se-V2o"/>
+                            <constraint firstItem="Ctk-zc-3Go" firstAttribute="top" secondItem="YTL-qZ-9OD" secondAttribute="bottom" id="smi-se-V2o"/>
                             <constraint firstItem="ViD-af-fpS" firstAttribute="width" secondItem="2aH-uO-sIY" secondAttribute="width" multiplier="10:10" id="soL-bh-kVn"/>
                             <constraint firstItem="jZO-gS-eag" firstAttribute="trailing" secondItem="T2J-ye-pgB" secondAttribute="trailing" id="vjY-p3-ZWK"/>
-                            <constraint firstItem="YTL-qZ-9OD" firstAttribute="top" secondItem="ViD-af-fpS" secondAttribute="bottom" constant="20" id="yG0-g3-lEs"/>
+                            <constraint firstItem="YTL-qZ-9OD" firstAttribute="top" secondItem="ViD-af-fpS" secondAttribute="bottom" constant="60" id="yG0-g3-lEs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jZO-gS-eag"/>
                     </view>

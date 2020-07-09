@@ -24,6 +24,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem?.title = ""
         setData()
     }
     

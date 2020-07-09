@@ -38,7 +38,6 @@
 		1E6CA1F724B3C3C400EFAE3C /* UIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6CA1F624B3C3C300EFAE3C /* UIManager.swift */; };
 		1E6CA1FA24B3C55800EFAE3C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6CA1F924B3C55800EFAE3C /* LoadingView.swift */; };
 		1E6CA1FC24B3C56100EFAE3C /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E6CA1FB24B3C56100EFAE3C /* LoadingView.xib */; };
-		1E72FE6824B4BED20002F852 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E72FE6724B4BED20002F852 /* Constants.swift */; };
 		1E72FE6C24B4D3650002F852 /* SingleBannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E72FE6A24B4D3650002F852 /* SingleBannerCell.swift */; };
 		1E72FE6D24B4D3650002F852 /* SingleBannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E72FE6B24B4D3650002F852 /* SingleBannerCell.xib */; };
 		1E72FE9224B586650002F852 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E72FE9124B586650002F852 /* SplashViewController.swift */; };
@@ -104,7 +103,6 @@
 		1E6CA1F624B3C3C300EFAE3C /* UIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIManager.swift; sourceTree = "<group>"; };
 		1E6CA1F924B3C55800EFAE3C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		1E6CA1FB24B3C56100EFAE3C /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
-		1E72FE6724B4BED20002F852 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1E72FE6A24B4D3650002F852 /* SingleBannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleBannerCell.swift; sourceTree = "<group>"; };
 		1E72FE6B24B4D3650002F852 /* SingleBannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleBannerCell.xib; sourceTree = "<group>"; };
 		1E72FE9124B586650002F852 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -244,7 +242,6 @@
 				1E445B1224B5DD7800057E6F /* Splash */,
 				1E6CA1F824B3C54500EFAE3C /* Loading */,
 				1E6CA1F624B3C3C300EFAE3C /* UIManager.swift */,
-				1E72FE6724B4BED20002F852 /* Constants.swift */,
 				1E6CA19F24B311FB00EFAE3C /* AppDelegate.swift */,
 				1E6CA1A124B311FB00EFAE3C /* SceneDelegate.swift */,
 				1E6CA1A824B3120000EFAE3C /* Assets.xcassets */,
@@ -599,7 +596,6 @@
 				1E445B1B24B5DEA600057E6F /* DetailProtocols.swift in Sources */,
 				1E6CA1F724B3C3C400EFAE3C /* UIManager.swift in Sources */,
 				1E6CA1D924B3131300EFAE3C /* ListWireframe.swift in Sources */,
-				1E72FE6824B4BED20002F852 /* Constants.swift in Sources */,
 				1E6CA1A024B311FB00EFAE3C /* AppDelegate.swift in Sources */,
 				1E445B1A24B5DEA600057E6F /* DetailPresenter.swift in Sources */,
 				1E445B1C24B5DEA600057E6F /* DetailInteractor.swift in Sources */,

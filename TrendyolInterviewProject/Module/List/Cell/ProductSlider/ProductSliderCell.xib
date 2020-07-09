@@ -16,7 +16,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3pD-Ll-csW">
-                        <rect key="frame" x="0.0" y="0.0" width="481" height="165"/>
+                        <rect key="frame" x="0.0" y="35" width="481" height="130"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="10" id="NXf-bp-0G4">
                             <size key="itemSize" width="128" height="128"/>
@@ -25,16 +25,29 @@
                             <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5d-3j-zNT">
+                        <rect key="frame" x="10" y="0.0" width="461" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="cR2-bu-ks3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="3pD-Ll-csW" firstAttribute="top" secondItem="NIr-Ev-TYq" secondAttribute="top" id="H4r-Pz-TcT"/>
+                    <constraint firstAttribute="trailing" secondItem="d5d-3j-zNT" secondAttribute="trailing" constant="10" id="LP1-ls-3oL"/>
+                    <constraint firstItem="d5d-3j-zNT" firstAttribute="top" secondItem="NIr-Ev-TYq" secondAttribute="top" id="PCQ-X6-iQy"/>
                     <constraint firstItem="3pD-Ll-csW" firstAttribute="leading" secondItem="NIr-Ev-TYq" secondAttribute="leading" id="YWl-Qf-SQC"/>
+                    <constraint firstItem="3pD-Ll-csW" firstAttribute="top" secondItem="d5d-3j-zNT" secondAttribute="bottom" constant="10" id="ccU-Kh-6gp"/>
                     <constraint firstAttribute="bottom" secondItem="3pD-Ll-csW" secondAttribute="bottom" id="f8X-ZI-6n6"/>
                     <constraint firstAttribute="trailing" secondItem="3pD-Ll-csW" secondAttribute="trailing" id="r5Z-sP-xbF"/>
+                    <constraint firstItem="d5d-3j-zNT" firstAttribute="leading" secondItem="NIr-Ev-TYq" secondAttribute="leading" constant="10" id="t1h-6i-rHl"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="collectionView" destination="3pD-Ll-csW" id="HhV-aV-JZm"/>
+                <outlet property="lblHeader" destination="d5d-3j-zNT" id="DgZ-lf-38i"/>
             </connections>
             <point key="canvasLocation" x="218.11594202898553" y="34.486607142857139"/>
         </tableViewCell>
