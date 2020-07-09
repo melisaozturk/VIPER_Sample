@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailWireframe: DetailPresenterToWireframeProtocol {
-  
+    
     static var mainStoryboard: UIStoryboard {
         return UIStoryboard(name: "Main", bundle: Bundle.main)
     }

@@ -32,7 +32,7 @@ class DetailViewController: UIViewController {
             if let urls = product.imageUrls {
                 self.urls = urls
                 self.pageControl.numberOfPages = self.urls!.count
-                    
+                
                 for index in 0..<self.urls!.count {
                     frame.origin.x = scrollView.frame.size.width * CGFloat(index)
                     frame.size = scrollView.frame.size
@@ -48,11 +48,12 @@ class DetailViewController: UIViewController {
                 scrollView.contentSize = CGSize(width: (scrollView.frame.size.width * CGFloat(self.urls!.count)), height: scrollView.frame.size.height)
                 scrollView.delegate = self
             }
-        }
-        if let brand = product?.brandName, let name = product?.name, let price = product?.marketPrice {
-            lblBrand.text = brand
-            lblName.text = name
-            lblPrice.text = "\(String(price)) TL"
+            
+            if let brand = product.brandName, let name = product.name, let price = product.marketPrice {
+                lblBrand.text = brand
+                lblName.text = name
+                lblPrice.text = "\(String(price)) TL"
+            }
         }
     }
     
@@ -67,7 +68,7 @@ class DetailViewController: UIViewController {
         self.navigationController?.navigationBar.topItem?.backBarButtonItem?.tintColor = .black
     }
 }
-    
+
 extension DetailViewController: DetailPresenterToViewProtocol{
 }
 
