@@ -81,9 +81,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ViD-af-fpS">
                                 <rect key="frame" x="0.0" y="44" width="414" height="448"/>
                                 <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="09f-Qd-d8D">
-                                        <rect key="frame" x="5" y="401" width="404" height="37"/>
-                                    </pageControl>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AOX-6U-rlQ">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -91,12 +88,10 @@
                                         <viewLayoutGuide key="frameLayoutGuide" id="J0L-c1-w7t"/>
                                     </scrollView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="09f-Qd-d8D" secondAttribute="bottom" constant="10" id="AiQ-ax-abk"/>
-                                    <constraint firstItem="09f-Qd-d8D" firstAttribute="leading" secondItem="ViD-af-fpS" secondAttribute="leading" constant="5" id="NXq-Io-F0c"/>
-                                    <constraint firstAttribute="trailing" secondItem="09f-Qd-d8D" secondAttribute="trailing" constant="5" id="gdL-nR-8cV"/>
-                                </constraints>
                             </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="09f-Qd-d8D">
+                                <rect key="frame" x="0.0" y="455" width="414" height="37"/>
+                            </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTL-qZ-9OD">
                                 <rect key="frame" x="20" y="552" width="374" height="25"/>
                                 <constraints>
@@ -166,12 +161,15 @@
                             <constraint firstItem="YTL-qZ-9OD" firstAttribute="leading" secondItem="jZO-gS-eag" secondAttribute="leading" constant="20" id="0zw-l3-mDd"/>
                             <constraint firstItem="jZO-gS-eag" firstAttribute="trailing" secondItem="YTL-qZ-9OD" secondAttribute="trailing" constant="20" id="4Ff-8W-Ss2"/>
                             <constraint firstItem="T2J-ye-pgB" firstAttribute="bottom" secondItem="jZO-gS-eag" secondAttribute="bottom" id="6Yh-Pl-pjd"/>
+                            <constraint firstItem="jZO-gS-eag" firstAttribute="trailing" secondItem="09f-Qd-d8D" secondAttribute="trailing" id="EOX-q9-gti"/>
                             <constraint firstItem="T2J-ye-pgB" firstAttribute="leading" secondItem="jZO-gS-eag" secondAttribute="leading" id="FRo-5p-qZ1"/>
                             <constraint firstItem="ViD-af-fpS" firstAttribute="centerX" secondItem="2aH-uO-sIY" secondAttribute="centerX" id="KoQ-eu-krm"/>
                             <constraint firstItem="ViD-af-fpS" firstAttribute="height" secondItem="2aH-uO-sIY" secondAttribute="height" multiplier="5:10" id="VCc-YV-Of8"/>
                             <constraint firstItem="ViD-af-fpS" firstAttribute="top" secondItem="jZO-gS-eag" secondAttribute="top" id="YeF-2M-ITj"/>
                             <constraint firstItem="jZO-gS-eag" firstAttribute="trailing" secondItem="Ctk-zc-3Go" secondAttribute="trailing" constant="20" id="bkS-VJ-gke"/>
+                            <constraint firstItem="09f-Qd-d8D" firstAttribute="leading" secondItem="jZO-gS-eag" secondAttribute="leading" id="cNR-dK-49H"/>
                             <constraint firstItem="Ctk-zc-3Go" firstAttribute="leading" secondItem="2aH-uO-sIY" secondAttribute="leading" constant="20" id="knl-Ng-zC0"/>
+                            <constraint firstItem="YTL-qZ-9OD" firstAttribute="top" secondItem="09f-Qd-d8D" secondAttribute="bottom" constant="60" id="sLP-LM-TFm"/>
                             <constraint firstItem="Ctk-zc-3Go" firstAttribute="top" secondItem="YTL-qZ-9OD" secondAttribute="bottom" id="smi-se-V2o"/>
                             <constraint firstItem="ViD-af-fpS" firstAttribute="width" secondItem="2aH-uO-sIY" secondAttribute="width" multiplier="10:10" id="soL-bh-kVn"/>
                             <constraint firstItem="jZO-gS-eag" firstAttribute="trailing" secondItem="T2J-ye-pgB" secondAttribute="trailing" id="vjY-p3-ZWK"/>

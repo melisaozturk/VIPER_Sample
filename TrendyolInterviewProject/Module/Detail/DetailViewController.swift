@@ -74,5 +74,6 @@ extension DetailViewController: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width
         pageControl.currentPage = Int(pageNumber)
+        pageControl.isUserInteractionEnabled = false
     }
 }
