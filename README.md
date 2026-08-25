@@ -1,4 +1,4 @@
-# Trendyol Sample App
+# Trendyol Demo App
 
 A demonstration iOS application showcasing the VIPER architecture pattern (View–Interactor–Presenter–Entity–Router) implemented in Swift. The project features a product listing and detail view integrated with Trendyol's API, demonstrating clean separation of responsibilities, testable components, and professional iOS development practices.
 
