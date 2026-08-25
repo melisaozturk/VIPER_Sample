@@ -1,48 +1,83 @@
-# VIPER Sample
+# Trendyol Sample App
 
-A iOS sample project demonstrating the VIPER architecture pattern (View–Interactor–Presenter–Entity–Router) implemented in Swift. The project shows a clean separation of responsibilities, testable components, and a simple flow for fetching and displaying data.
+A demonstration iOS application showcasing the VIPER architecture pattern (View–Interactor–Presenter–Entity–Router) implemented in Swift. The project features a product listing and detail view integrated with Trendyol's API, demonstrating clean separation of responsibilities, testable components, and professional iOS development practices.
+
+## Overview
+
+This native iOS application built with Swift and UIKit demonstrates clean architecture principles using the VIPER pattern. The app fetches and displays widgets containing products and banners, providing a smooth browsing experience with product details and image galleries.
 
 ## Features
 
-- Example VIPER modules for a simple list + detail flow
-- Network layer abstraction (URLSession)
-- Basic dependency wiring using factory/assembler pattern
-- Simple caching and image loading (via Kingfisher in the Podfile)
-- Clear folder structure to separate concerns
+- **Product Listing**: Horizontally scrollable product sliders organized by widgets
+- **Banner Display**: Single banner sections for promotions
+- **Product Details**: Dedicated detail view with image gallery and product information
+- **Image Gallery**: Swipeable image carousel with page indicators
+- **Loading States**: Visual feedback during network operations
+- **Error Handling**: User-friendly error messages for network failures
+- **Network Layer**: Clean abstraction using URLSession with protocol-oriented design
+- **Image Caching**: Efficient image loading and caching via Kingfisher
 
 ## Architecture
 
-VIPER splits responsibilities into five layers:
+This project implements the **VIPER** (View-Interactor-Presenter-Entity-Router) architecture pattern, providing clear separation of concerns:
 
-- View: Displays UI and forwards user actions to the Presenter.
-- Interactor: Contains business logic and data fetching.
-- Presenter: Prepares data for the View and handles presentation logic.
-- Entity: Plain data models used by Interactor/Presenter.
-- Router: Handles navigation and module wiring.
+- **View**: Displays UI and handles user interactions (`ListViewController`, `DetailViewController`)
+- **Interactor**: Contains business logic and data fetching operations
+- **Presenter**: Acts as intermediary between View and Interactor, preparing data for display
+- **Entity**: Plain data models (structs conforming to Codable)
+- **Router (Wireframe)**: Handles navigation and module assembly with dependency injection
 
-This sample demonstrates how to implement and connect these components for a simple, testable module.
+## Tech Stack
 
-## Requirements
+- **Language**: Swift 5+
+- **UI Framework**: UIKit with Storyboards
+- **Networking**: URLSession
+- **JSON Parsing**: Codable protocol
+- **Image Loading**: Kingfisher (~> 5.0)
+- **Minimum Deployment Target**: iOS 13.0+
+- **Dependency Management**: CocoaPods
 
-- Xcode 12.0 or newer
-- iOS 13.0+ (adjustable in project settings)
-- Swift 5+
+## Usage
 
-## Installation
+### Browsing Products
 
-This project uses CocoaPods for dependency management.
+1. Launch the app to see the product listing screen
+2. Scroll vertically to browse different widget sections
+3. Scroll horizontally within each product slider to view more products
+4. Tap on any product to view its details
 
-1. Install CocoaPods if you don't have it:
+### Viewing Product Details
 
-   sudo gem install cocoapods
+1. On the detail screen, swipe through the image gallery
+2. View product information including brand, name, and price
+3. Use the page indicator to track your position in the gallery
+4. Navigate back using the navigation bar
 
-2. Install project dependencies:
+## API Integration
 
-   pod install
+The app fetches data from Trendyol's API:
+```
+Endpoint: https://api.trendyol.com/zeus/widget/display?widgetPageName=interview
+```
 
-3. Open the workspace:
+Response includes:
+- Widget configurations
+- Product information (images, prices, brands)
+- Banner content
+- Navigation metadata
 
-   open VIPER_Sample.xcworkspace
+## Key Design Patterns
 
-4. Build and run the app on a simulator or device.
+- **VIPER Architecture**: Separation of concerns across five layers
+- **Protocol-Oriented Programming**: Loose coupling through protocol definitions
+- **Dependency Injection**: Wireframe pattern for module assembly
+- **Generic Programming**: Reusable API client implementation
+- **Singleton Pattern**: Shared UI manager for loading indicators
+
+## Dependencies
+
+### CocoaPods
+
+- **Kingfisher** (~> 5.0): High-performance image downloading and caching library
+
 
